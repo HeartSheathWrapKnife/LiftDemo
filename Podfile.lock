@@ -14,33 +14,79 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.1.1)
+  - Masonry (1.1.0)
+  - MGJRouter (0.9.3)
+  - MJRefresh (3.1.15.7)
+  - ReactiveObjC (3.1.0)
   - SDAutoLayout (2.1.9)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SGQRCode (2.5.4)
+  - STPickerView (2.4)
   - SVProgressHUD (2.2.5)
-  - YYCache (1.0.4)
-  - YYModel (1.0.4)
+  - TYCyclePagerView (1.1.0)
+  - TZImagePickerController (3.0.8)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - AFNetworking
+  - AFNetworking (~> 3.0)
+  - FMDB
+  - IQKeyboardManager
+  - Masonry
+  - MGJRouter (~> 0.9.0)
+  - MJRefresh
+  - ReactiveObjC
   - SDAutoLayout (~> 2.1.3)
+  - SDWebImage (~> 4.0)
+  - SGQRCode (~> 2.5.4)
+  - STPickerView (= 2.4)
   - SVProgressHUD
-  - YYCache
-  - YYModel
+  - TYCyclePagerView
+  - TZImagePickerController
+  - YYKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FMDB
+    - IQKeyboardManager
+    - Masonry
+    - MGJRouter
+    - MJRefresh
+    - ReactiveObjC
     - SDAutoLayout
+    - SDWebImage
+    - SGQRCode
+    - STPickerView
     - SVProgressHUD
-    - YYCache
-    - YYModel
+    - TYCyclePagerView
+    - TZImagePickerController
+    - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SGQRCode: 7195cef538aae5d33b6721407b58011a5fef6487
+  STPickerView: d0e234f230f45bd720a6739d0ae9fbddf038958b
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  TYCyclePagerView: b70858c9b5d0e80e1e3129ff5ceb027eb0f76d44
+  TZImagePickerController: 9092aa0f97af1cb9643c0ea7d7e5a77802ec7245
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b9685e1edd980fac1e6d4438107344b3ea35238c
+PODFILE CHECKSUM: 57d62403799d73867aee242cbcd3455e0c532672
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

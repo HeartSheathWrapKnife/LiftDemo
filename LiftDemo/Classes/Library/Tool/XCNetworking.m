@@ -107,7 +107,7 @@ static XCHTTPSessionManager *_manager = nil;
     if ([params isKindOfClass:[NSDictionary class]]) {
         p = params;
     } else {
-        p = [params yy_modelToJSONObject];
+        p = [params modelToJSONObject];
     }
     
     /// 创建请求
@@ -207,10 +207,10 @@ static XCHTTPSessionManager *_manager = nil;
     if ([params isKindOfClass:[NSDictionary class]]) {
         p = params;
     } else {
-        p = [params yy_modelToJSONObject];
+        p = [params modelToJSONObject];
     }
     /// 组装body
-    NSString *bodyStr = [p yy_modelToJSONString];
+    NSString *bodyStr = [p modelToJSONObject];
     NSData   *body = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
     /// 创建请求
     XCHTTPSessionManager *manager = [XCHTTPSessionManager sharedManager];
@@ -277,7 +277,7 @@ static XCHTTPSessionManager *_manager = nil;
     if ([params isKindOfClass:[NSDictionary class]]) {
         p = params;
     } else {
-        p = [params yy_modelToJSONObject];
+        p = [params modelToJSONObject];
     }
     
     XCHTTPSessionManager * manager = [XCHTTPSessionManager sharedManager];
@@ -352,7 +352,7 @@ static XCHTTPSessionManager *_manager = nil;
     if ([params isKindOfClass:[NSDictionary class]]) {
         p = params;
     } else {
-        p = [params yy_modelToJSONObject];
+        p = [params modelToJSONObject];
     }
 #if DEBUG
     _printParameter(manager,p, event);
@@ -398,7 +398,7 @@ static XCHTTPSessionManager *_manager = nil;
     if ([params isKindOfClass:[NSDictionary class]]) {
         p = params;
     } else {
-        p = [params yy_modelToJSONObject];
+        p = [params modelToJSONObject];
     }
 #if DEBUG
     _printParameter(manager,p, event);

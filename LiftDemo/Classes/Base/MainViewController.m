@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "HallController.h"
 #import "MineViewController.h"
+#import "FloorsController.h"
 
 
 @interface MainViewController ()
@@ -62,12 +63,12 @@
 
 - (void)setupChildControllers {
     
-    NSArray *selectImages = @[@"tab_home_s", @"tab_cycle_s", @"tab_mine_s", @"tab_mine_s"];
-    NSArray *normalImages = @[@"tab_home_n", @"tab_cycle_n", @"tab_mine_n", @"tab_mine_n"];
+    NSArray *selectImages = @[@"笑-1", @"酷", @"开心-2", @"热恋"];
+    NSArray *normalImages = @[@"面无表情", @"面无表情", @"面无表情", @"面无表情"];
     NSArray *title = @[@"Hall",@"Floors",@"ToDoList",@"Mine"];
     
     HallController * controller1 = [[HallController alloc] init];
-    HallController * controller2 = [[HallController alloc] init];
+    FloorsController * controller2 = [[FloorsController alloc] init];
     MineViewController * controller3 = [[MineViewController alloc] init];
     MineViewController * controller4 = [[MineViewController alloc] init];
     NSArray * array = @[controller1, controller2, controller3, controller4];

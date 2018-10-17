@@ -26,12 +26,6 @@
 @property (nonatomic,   copy) NSString * accesstoken;//token
 @property (nonatomic,   copy) NSString * userid;
 @property (nonatomic,   copy) NSString * username;
-@property (nonatomic,   copy) NSString * myfandian;
-@property (nonatomic,   copy) NSString * maxfandian;
-@property (nonatomic,   copy) NSString * coin;
-@property (nonatomic,   assign) BOOL iscoinpwd;//提现密码
-@property (nonatomic, assign) BOOL isagent;//是否代理账号
-
 @property (nonatomic, assign) BOOL needRefresh;//如果推出再登录 重新进入需要刷新首页的数据
 @property (nonatomic,   copy) NSString * token;
 
@@ -47,8 +41,8 @@
 @property (nonatomic, strong) UserLocation * location;
 ///  用户信息
 @property (nonatomic, strong) UserInfo * userInfo;
-///  类型
-@property (nonatomic,   copy) NSString * pageType;
+///  多任务缩略图类型  0无  1模糊当前页面截图  2自定义视图
+@property (nonatomic, assign) NSInteger  backGroundMaskType;
 ///  是否需要重新验证手势密码
 @property (nonatomic, assign ,getter=isCheckGesturePwd) BOOL checkGesturePwd;
 

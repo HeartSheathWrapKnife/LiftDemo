@@ -22,12 +22,12 @@
 #import "XCNetworking.h"
 //#import "Seven.h"
 #import "Parameter.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 
 
 #import "SLCollectionLogTool.h"
 //#import "SLDevider.h"
-#import "YYModel.h"
+#import <NSObject+YYModel.h>
 #import "BaseViewController.h"
 #import "Masonry.h"
 //#import "RMNavigationBar.h"

@@ -8,7 +8,8 @@
 #import <UIKit/UIKit.h>
 
 #import "UIButton+Extension.h"
-#import "YYTextWeakProxy.h"
+//#import "YYTextWeakProxy.h"
+#import "YYWeakProxy.h"
 
 @implementation UIButton (Extension)
 - (void)setTitle:(NSString *)title {

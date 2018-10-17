@@ -11,9 +11,11 @@
 #import "LoginViewController.h"
 #import "GuideController.h"
 #import "IQKeyboardManager.h"
+#import "BackGroundMaskView.h"
+#import "BackGroundCustomMask.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic,   weak) UIView *bgMask;//多任务缩略图模糊遮罩
 @end
 
 @implementation AppDelegate
@@ -45,7 +47,7 @@
     keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17]; // 设置占位文字的字体
     
     keyboardManager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
-    
+
     return YES;
 }
 
@@ -88,13 +90,41 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    SLLog(@"background");
+    //后台模式遮罩层 多任务缩略图
+    if (USER.backGroundMaskType != 0) {
+        if (USER.backGroundMaskType == 1) {//模糊当前截图模式
+            BackGroundMaskView *view = [[BackGroundMaskView alloc] initWithFrame:self.window.frame];
+            self.bgMask = view;
+            //添加mask视图
+            for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+                if (window.windowLevel == UIWindowLevelNormal) {
+                    [window addSubview:self.bgMask];
+                }
+            }
+        } else {//(USER.backGroundMaskType == 2) //显示自定义视图
+            UIView *view = [BackGroundCustomMask creatViewFromNib];
+            view.frame = self.window.frame;
+            self.bgMask = view;
+            //添加mask视图
+            for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+                if (window.windowLevel == UIWindowLevelNormal) {
+                    [window addSubview:self.bgMask];
+                }
+            }
+        }
+    }
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    SLLog(@"enterforeground");
+    //移除 多任务缩略图模糊
+    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+        if (window.windowLevel == UIWindowLevelNormal) {
+            [self.bgMask removeFromSuperview];
+        }
+    }
 }
 
 

@@ -33,18 +33,18 @@ static User * _user = nil;
     
     if (!userInfo) return NO;
     
-    UserInfo * info = [UserInfo yy_modelWithJSON:userInfo];
+    UserInfo * info = [UserInfo modelWithJSON:userInfo];
     [User sharedUser]->_userInfo = info;
     [[User sharedUser] setLogin:YES];
     // 沙盒路径
     NSString * path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"userInfo.plist"];
-    return [info.yy_modelToJSONObject writeToFile:path atomically:YES];
+    return [info.modelToJSONObject writeToFile:path atomically:YES];
 }
 
 + (void)saveUserLocation {
     
     NSString * path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"userLocation.plist"];
-    NSDictionary * dict = [User sharedUser].location.yy_modelToJSONObject;
+    NSDictionary * dict = [User sharedUser].location.modelToJSONObject;
     [dict writeToFile:path atomically:YES];
     
 }
@@ -55,7 +55,7 @@ static User * _user = nil;
     NSDictionary * d = [NSDictionary dictionaryWithContentsOfFile:userInfoPath];
     
     if ([d count]) {
-        UserInfo * info = [UserInfo yy_modelWithJSON:d];
+        UserInfo * info = [UserInfo modelWithJSON:d];
         [User sharedUser]->_userInfo = info;
         [[User sharedUser] setLogin:YES];
     }
