@@ -23,7 +23,7 @@
 
 - (void)setModel:(FloorModel *)model {
     _model = model;
-    self.name.text = model.name;
+    self.name.text = model.title;
     self.desc.text = model.desc;
 }
 

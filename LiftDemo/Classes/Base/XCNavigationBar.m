@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 /// 返回按钮图片
-static NSString * BackButtonImageName = @"btn_back_white";
+static NSString * BackButtonImageName = @"navItem_whiteBack";
 ///  标题文字大小
 static CGFloat    TitleFont           = 18;
 ///  按钮文字大小

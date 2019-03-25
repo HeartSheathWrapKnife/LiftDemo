@@ -6,11 +6,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "热恋@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "热恋.png",
+      "filename" : "热恋@3x.png",
       "scale" : "3x"
     }
   ],

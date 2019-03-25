@@ -35,7 +35,7 @@
     NSArray * sections = @[@"视图封装",@"动画",@"绘图与手势",@"蓝牙",@"传感器",@"demo"];
     for (int i = 0 ; i < sections.count; i ++) {
         FloorModel *model = [FloorModel new];
-        model.name = sections[i];
+        model.title = sections[i];
         [self.dataArr addObject:model];
     }
 }
@@ -93,7 +93,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FloorRoomsController * controller = [[FloorRoomsController alloc] init];
-    controller.sectionName = self.dataArr[indexPath.row].name;
+    controller.sectionName = self.dataArr[indexPath.row].title;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

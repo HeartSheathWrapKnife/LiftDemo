@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface FloorModel : NSObject
-@property (nonatomic, assign) Class descVC;
-@property (nonatomic,   copy) NSString * name;
+//控制器名
+@property (nonatomic,   copy) NSString * className;
+//标题
+@property (nonatomic,   copy) NSString * title;
+//详情描述
 @property (nonatomic,   copy) NSString * desc;
+//详情控制器
+@property (nonatomic, assign) Class descVC;
+
++ (FloorModel *)modelWithTitle:(NSString *)title desc:(NSString *)desc className:(NSString *)className;
+
 @end

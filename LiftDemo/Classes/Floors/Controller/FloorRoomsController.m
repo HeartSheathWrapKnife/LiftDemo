@@ -59,11 +59,10 @@
 }
 
 - (void)initDataWithUI {//视图
-    FloorModel *item0 = [FloorModel new];
-    item0.name = @"多任务缩略图";
-    item0.desc = @"显示自定义页面或模糊当前页面";
-    item0.descVC = [BackGroundMaskTestController class];
-    self.dataArr = @[item0];
+
+    self.dataArr = @[[FloorModel modelWithTitle:@"多任务缩略图"
+                                           desc:@"显示自定义页面或模糊当前页面"
+                                      className:@"BackGroundMaskTestController"]];
     
 }
 
@@ -73,11 +72,9 @@
 }
 
 - (void)initDataWithGesture {//绘图与手势
-    FloorModel *item0 = [FloorModel new];
-    item0.name = @"手势解锁";
-    item0.desc = @"九宫格样式";
-    item0.descVC = [GestureLockShowController class];
-    self.dataArr = @[item0];
+    self.dataArr = @[[FloorModel modelWithTitle:@"手势解锁"
+                                           desc:@"九宫格样式"
+                                      className:@"GestureLockShowController"]];
 }
 
 - (void)initDataWithBlueTooth {//蓝牙
@@ -86,30 +83,24 @@
 }
 
 - (void)initDataWithSensor {//传感器
-    FloorModel *item0 = [FloorModel new];
-    item0.name = @"摇一摇";
-    item0.desc = @"陀螺仪实现，添加震动反馈演示，触发灵敏度可调";
-    item0.descVC = [MotionShowController class];
-    self.dataArr = @[item0];
+
+    self.dataArr = @[[FloorModel modelWithTitle:@"摇一摇"
+                                           desc:@"陀螺仪实现，添加震动反馈演示，触发灵敏度可调"
+                                      className:@"MotionShowController"]];
     
 }
 
 - (void)initDataWithDemo {//demo
-    FloorModel *item0 = [FloorModel new];
-    item0.name = @"断点续传实现";
-    item0.desc = @"使用AF实现，处理了网络变化，后台下载等情况";
-    item0.descVC = [ResumDownloadController class];
     
-    FloorModel *item1 = [FloorModel new];
-    item1.name = @"AVPlayer自定UI";
-    item1.desc = @"自定视频播放器demo，不完善";
-    item1.descVC = [AVPlayerShowController class];
-    
-    self.dataArr = @[item0,item1];
-    
-    
-    
+    self.dataArr = @[[FloorModel modelWithTitle:@"断点续传实现"
+                                           desc:@"使用AF实现，处理了网络变化，后台下载等情况"
+                                      className:@"ResumDownloadController"],
+                     [FloorModel modelWithTitle:@"AVPlayer自定UI"
+                                           desc:@"自定视频播放器demo，不完善"
+                                      className:@"AVPlayerShowController"],];
 }
+
+
 
 ///  初始化子控件
 - (void)setupSubViews {

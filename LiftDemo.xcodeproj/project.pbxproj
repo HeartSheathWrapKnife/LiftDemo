@@ -408,6 +408,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C94B342248BAD100089A20 /* 指纹 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "指纹";
+			sourceTree = "<group>";
+		};
 		19C70CD462B6D57D1C5AA933 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,13 +854,10 @@
 		1FCE7A31212BEF5E00B15053 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8A320A412177172C00929BA4 /* Category */,
 				8A320A432177172C00929BA4 /* Floors */,
 				8A320A7F2177172C00929BA4 /* Hall */,
-				8A320A422177172C00929BA4 /* Helper */,
 				8A320A872177172C00929BA4 /* Login */,
 				8A320A8F2177172C00929BA4 /* Mine */,
-				8A320A952177172C00929BA4 /* Network */,
 				8A320A962177172C00929BA4 /* Other */,
 				1FCE7A35212BEF5E00B15053 /* Library */,
 				1FCE7A36212BEF5E00B15053 /* Base */,
@@ -893,20 +897,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		8A320A412177172C00929BA4 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		8A320A422177172C00929BA4 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		8A320A432177172C00929BA4 /* Floors */ = {
 			isa = PBXGroup;
 			children = (
@@ -933,11 +923,8 @@
 			isa = PBXGroup;
 			children = (
 				8A320A4A2177172C00929BA4 /* Demo */,
-				8A320A562177172C00929BA4 /* UIDynamic物理仿真 */,
 				8A320A572177172C00929BA4 /* 传感器 */,
-				8A320A5B2177172C00929BA4 /* 动画 */,
 				8A320A5C2177172C00929BA4 /* 绘图与手势 */,
-				8A320A6D2177172C00929BA4 /* 蓝牙 */,
 				8A320A6E2177172C00929BA4 /* 视图封装 */,
 			);
 			path = FloorStrut;
@@ -982,16 +969,10 @@
 			path = "音乐";
 			sourceTree = "<group>";
 		};
-		8A320A562177172C00929BA4 /* UIDynamic物理仿真 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UIDynamic物理仿真";
-			sourceTree = "<group>";
-		};
 		8A320A572177172C00929BA4 /* 传感器 */ = {
 			isa = PBXGroup;
 			children = (
+				18C94B342248BAD100089A20 /* 指纹 */,
 				8A320A582177172C00929BA4 /* 摇一摇 */,
 			);
 			path = "传感器";
@@ -1004,13 +985,6 @@
 				8A320A5A2177172C00929BA4 /* MotionShowController.m */,
 			);
 			path = "摇一摇";
-			sourceTree = "<group>";
-		};
-		8A320A5B2177172C00929BA4 /* 动画 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "动画";
 			sourceTree = "<group>";
 		};
 		8A320A5C2177172C00929BA4 /* 绘图与手势 */ = {
@@ -1055,13 +1029,6 @@
 				8A320A642177172C00929BA4 /* gesture_selected@2x.png */,
 			);
 			path = resources;
-			sourceTree = "<group>";
-		};
-		8A320A6D2177172C00929BA4 /* 蓝牙 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "蓝牙";
 			sourceTree = "<group>";
 		};
 		8A320A6E2177172C00929BA4 /* 视图封装 */ = {
@@ -1117,7 +1084,6 @@
 			isa = PBXGroup;
 			children = (
 				8A320A802177172C00929BA4 /* Controller */,
-				8A320A832177172C00929BA4 /* Model */,
 				8A320A842177172C00929BA4 /* View */,
 			);
 			path = Hall;
@@ -1130,13 +1096,6 @@
 				8A320A822177172C00929BA4 /* HallController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8A320A832177172C00929BA4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8A320A842177172C00929BA4 /* View */ = {
@@ -1200,13 +1159,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		8A320A952177172C00929BA4 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		8A320A962177172C00929BA4 /* Other */ = {
@@ -1296,7 +1248,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = Lostifor;
+				ORGANIZATIONNAME = lostifor;
 				TargetAttributes = {
 					1FCE79FB212BED5300B15053 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1677,7 +1629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VMKD42Z3X4;
+				DEVELOPMENT_TEAM = 4DBMNGP47G;
 				GCC_PREFIX_HEADER = LiftDemo/Classes/Other/LiftDemo.pch;
 				INFOPLIST_FILE = LiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1697,7 +1649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VMKD42Z3X4;
+				DEVELOPMENT_TEAM = 4DBMNGP47G;
 				GCC_PREFIX_HEADER = LiftDemo/Classes/Other/LiftDemo.pch;
 				INFOPLIST_FILE = LiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
