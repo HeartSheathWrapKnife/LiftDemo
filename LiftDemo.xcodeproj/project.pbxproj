@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1896105B224C627700F76E7A /* DrawTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896105A224C627700F76E7A /* DrawTestView.m */; };
+		18C7874B2249F517009518D9 /* DrawRectTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7874A2249F516009518D9 /* DrawRectTestController.m */; };
 		1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */; };
 		1F0536AA213A6BE7001E5FBB /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053423213A6BE6001E5FBB /* UIImage+Extension.m */; };
 		1F0536AB213A6BE7001E5FBB /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053427213A6BE6001E5FBB /* UIImage+Compress.m */; };
@@ -148,6 +150,10 @@
 
 /* Begin PBXFileReference section */
 		0D7815E7ED8B00A86F9E814A /* Pods-LiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiftDemo/Pods-LiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		18961059224C627700F76E7A /* DrawTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawTestView.h; sourceTree = "<group>"; };
+		1896105A224C627700F76E7A /* DrawTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawTestView.m; sourceTree = "<group>"; };
+		18C787492249F516009518D9 /* DrawRectTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectTestController.h; sourceTree = "<group>"; };
+		18C7874A2249F516009518D9 /* DrawRectTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectTestController.m; sourceTree = "<group>"; };
 		1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StatusBarStyle.m"; sourceTree = "<group>"; };
 		1F05341D213A6BE6001E5FBB /* NSObject+ExchangeToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExchangeToString.h"; sourceTree = "<group>"; };
 		1F05341E213A6BE6001E5FBB /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
@@ -408,6 +414,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C787482249F4D6009518D9 /* DrawRect画圆弧 */ = {
+			isa = PBXGroup;
+			children = (
+				18C787492249F516009518D9 /* DrawRectTestController.h */,
+				18C7874A2249F516009518D9 /* DrawRectTestController.m */,
+				18961059224C627700F76E7A /* DrawTestView.h */,
+				1896105A224C627700F76E7A /* DrawTestView.m */,
+			);
+			path = "DrawRect画圆弧";
+			sourceTree = "<group>";
+		};
 		18C94B342248BAD100089A20 /* 指纹 */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,6 +1007,7 @@
 		8A320A5C2177172C00929BA4 /* 绘图与手势 */ = {
 			isa = PBXGroup;
 			children = (
+				18C787482249F4D6009518D9 /* DrawRect画圆弧 */,
 				8A320A5D2177172C00929BA4 /* 九宫格解锁 */,
 			);
 			path = "绘图与手势";
@@ -1410,6 +1428,7 @@
 				1F0536B1213A6BE7001E5FBB /* NSAttributedString+Adaptive.m in Sources */,
 				1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */,
 				8A320AB82177172C00929BA4 /* RegisterController.m in Sources */,
+				1896105B224C627700F76E7A /* DrawTestView.m in Sources */,
 				8A320AAB2177172C00929BA4 /* ZLGestureLockViewController.m in Sources */,
 				1F0536C1213A6BE7001E5FBB /* UIView+AdaptivePerfect.m in Sources */,
 				1F0536C7213A6BE7001E5FBB /* SLLocationManager.m in Sources */,
@@ -1423,6 +1442,7 @@
 				1F0537DE213A6C16001E5FBB /* GuideController.m in Sources */,
 				1F0537DC213A6C16001E5FBB /* MainViewController.m in Sources */,
 				8A320A9F2177172C00929BA4 /* ResumDownloadController.m in Sources */,
+				18C7874B2249F517009518D9 /* DrawRectTestController.m in Sources */,
 				1F0537E0213A6C16001E5FBB /* BaseViewController.m in Sources */,
 				1F0536C6213A6BE7001E5FBB /* XCNetworking.m in Sources */,
 				1F0536D6213A6BE7001E5FBB /* GTMBase64.m in Sources */,

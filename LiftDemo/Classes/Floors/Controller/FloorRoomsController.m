@@ -74,7 +74,7 @@
 - (void)initDataWithGesture {//绘图与手势
     self.dataArr = @[[FloorModel modelWithTitle:@"手势解锁"
                                            desc:@"九宫格样式"
-                                      className:@"GestureLockShowController"]];
+                                      className:@"GestureLockShowController"],[FloorModel modelWithTitle:@"drawRect绘图" desc:@"" className:@"DrawRectTestController"]];
 }
 
 - (void)initDataWithBlueTooth {//蓝牙
