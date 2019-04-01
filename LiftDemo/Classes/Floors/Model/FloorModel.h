@@ -17,7 +17,9 @@
 @property (nonatomic,   copy) NSString * desc;
 //详情控制器
 @property (nonatomic, assign) Class descVC;
-
-+ (FloorModel *)modelWithTitle:(NSString *)title desc:(NSString *)desc className:(NSString *)className;
+//显示单元
++ (FloorModel *)modelWithTitle:(NSString *)title
+                          desc:(NSString *)desc
+                     className:(NSString *)className;
 
 @end

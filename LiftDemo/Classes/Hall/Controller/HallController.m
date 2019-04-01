@@ -11,8 +11,7 @@
 #import "TYPageControl.h"
 #import "TYCyclePagerViewCell.h"
 
-@interface HallController ()<TYCyclePagerViewDelegate,TYCyclePagerViewDataSource>
-@property (nonatomic, strong) TYCyclePagerView * pagerView;
+@interface HallController ()
 
 @end
 
@@ -31,16 +30,18 @@
 
 ///  初始化子控件
 - (void)setupSubViews {
-    //轮播图
-    TYCyclePagerView *pagerView = [[TYCyclePagerView alloc] initWithFrame:Rect(0, 0, ScreenWidth, Fit(130))];
-    pagerView.backgroundColor = HexColorInt32_t(f8f8f8);
-    pagerView.isInfiniteLoop = YES;
-    pagerView.autoScrollInterval = 8.0;
-    pagerView.dataSource = self;
-    pagerView.delegate = self;
-    [pagerView registerClass:[TYCyclePagerViewCell class] forCellWithReuseIdentifier:@"cellId"];
-    [self.view addSubview:pagerView];
-    _pagerView = pagerView;
+    
+    
+    //按钮  上图+下文 margin 间隔
+    float btnW = (kScreenWidth - 2) / 4.;
+    for (int i = 0; i < 4; i ++) {
+        UIButton *button = [UIButton buttonWithTitle:@"title" titleColor:HexColor(0x333333) backgroundColor:[UIColor clearColor] font:14 image:@"酷" frame:CGRectMake(btnW*i, 120, btnW, 80)];
+        [UIButton setBtnMidleStyle:button margin:3];
+        [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SLLog(@"click");
+        }];
+        [self.view addSubview:button];
+    }
 }
 
 ///  设置自定义导航条
@@ -53,35 +54,13 @@
     }];
 }
 
+
 #pragma mark - Actions
 
 
 #pragma mark - Networking
 
-#pragma mark - TYCyclePagerViewDataSource
 
-- (NSInteger)numberOfItemsInPagerView:(TYCyclePagerView *)pageView {
-    return 5;
-}
-
-- (UICollectionViewCell *)pagerView:(TYCyclePagerView *)pagerView cellForItemAtIndex:(NSInteger)index {
-    TYCyclePagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndex:index];
-    //    [cell.image sd_setImageWithURL:UrlWithString(self.bannerArr[index])];
-//    cell.imageUrl = self.bannerArr[index];
-    return cell;
-}
-
-- (TYCyclePagerViewLayout *)layoutForPagerView:(TYCyclePagerView *)pageView {
-    TYCyclePagerViewLayout *layout = [[TYCyclePagerViewLayout alloc]init];
-    layout.itemSize = CGSizeMake(CGRectGetWidth(pageView.frame)*0.8, CGRectGetHeight(pageView.frame)*0.8);
-    layout.itemSpacing = 15;
-    //layout.minimumAlpha = 0.3;
-    layout.itemHorizontalCenter = YES;
-    return layout;
-}
-
-- (void)pagerView:(TYCyclePagerView *)pageView didScrollFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
-}
 
 #pragma mark - Delegate
 

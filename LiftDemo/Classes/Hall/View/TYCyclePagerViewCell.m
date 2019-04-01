@@ -9,10 +9,11 @@
 #import "TYCyclePagerViewCell.h"
 
 @interface TYCyclePagerViewCell ()
-@property (nonatomic, weak) UILabel *label;
+//@property (nonatomic, weak) UILabel *label;
 @end
 
 @implementation TYCyclePagerViewCell
+
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -46,12 +47,12 @@
     _label = label;
 }
 
-- (void)addImgView {
-    UIImageView *image = [[UIImageView alloc] init];
-    image.frame = self.frame;
-    [self addSubview:image];
-    _image = image;
-}
+//- (void)addImgView {
+//    UIImageView *image = [[UIImageView alloc] init];
+//    image.frame = self.frame;
+//    [self addSubview:image];
+//    _image = image;
+//}
 
 
 - (void)layoutSubviews {
@@ -60,9 +61,9 @@
 //    _image.frame = self.bounds;
 }
 
-- (void)setImageUrl:(NSString *)imageUrl {
-    _imageUrl = imageUrl;
-    [self.image sd_setImageWithURL:UrlWithString(imageUrl)];
-}
+//- (void)setImageUrl:(NSString *)imageUrl {
+//    _imageUrl = imageUrl;
+//    [self.image sd_setImageWithURL:UrlWithString(imageUrl)];
+//}
 
 @end

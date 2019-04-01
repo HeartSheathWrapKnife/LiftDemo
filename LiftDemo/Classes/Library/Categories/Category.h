@@ -2,8 +2,8 @@
 //  Category.h
 //  AFN
 //
-//  Created by toocmstoocms on 15/5/15.
-//  Copyright (c) 2015年 toocmstoocms. All rights reserved.
+//  Created by lostifor on 15/5/15.
+//  Copyright (c) 2015年 lostifor. All rights reserved.
 //
 
 #import "NSDate+Extension.h"

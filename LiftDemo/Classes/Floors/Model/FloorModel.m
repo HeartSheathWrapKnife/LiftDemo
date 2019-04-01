@@ -10,7 +10,9 @@
 
 @implementation FloorModel
 
-+ (FloorModel *)modelWithTitle:(NSString *)title desc:(NSString *)desc className:(NSString *)className {
++ (FloorModel *)modelWithTitle:(NSString *)title
+                          desc:(NSString *)desc
+                     className:(NSString *)className {
     FloorModel *item = [FloorModel new];
     item.title = title;
     item.desc = desc;

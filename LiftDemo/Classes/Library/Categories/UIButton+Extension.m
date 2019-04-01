@@ -2,8 +2,8 @@
 //  UIButton+SL.m
 //  Sushi
 //
-//  Created by toocmstoocms on 15/5/8.
-//  Copyright (c) 2015年 Seven. All rights reserved.
+//  Created by losifor on 15/5/8.
+//  Copyright (c) 2015年 losifor. All rights reserved.
 //
 #import <UIKit/UIKit.h>
 
@@ -137,6 +137,19 @@
     dispatch_resume(_timer);
     
     
+}
+
++ (void)setBtnMidleStyle:(UIButton *)sender margin:(CGFloat)margin{
+    if (sender.imageView == nil || sender.titleLabel == nil) {
+        return;
+    }
+    CGFloat imageWidth = sender.imageView.frame.size.width;
+    CGFloat imageHeight = sender.imageView.frame.size.height;
+    CGFloat titleWidth = sender.titleLabel.frame.size.width;
+    CGFloat titleHeight = sender.titleLabel.frame.size.height;
+    margin = margin?margin:5;
+    sender.imageEdgeInsets = UIEdgeInsetsMake(-titleHeight-margin/2, 0, 0, -titleWidth);
+    sender.titleEdgeInsets = UIEdgeInsetsMake(imageHeight+margin/2, -imageWidth, 0, 0);
 }
 
 @end

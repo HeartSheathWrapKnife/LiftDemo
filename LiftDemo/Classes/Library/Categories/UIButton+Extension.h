@@ -2,8 +2,8 @@
 //  UIButton+SL.h
 //  Sushi
 //
-//  Created by toocmstoocms on 15/5/8.
-//  Copyright (c) 2015年 Seven. All rights reserved.
+//  Created by losifor on 15/5/8.
+//  Copyright (c) 2015年 losifor. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -54,4 +54,12 @@
                          target:(id)target
                          action:(SEL)action
                           frame:(CGRect)frame;
+
+/**
+ 设置按钮图文上下排列
+ 
+ @param sender 按钮
+ @param margin 间隔 不传默认5
+ */
++ (void)setBtnMidleStyle:(UIButton *)sender margin:(CGFloat)margin;
 @end

@@ -18,5 +18,5 @@
  @param options 选项列表
  @param selectedIndex 选择的index
  */
-+ (JYActionSheet *)actionSheetWithTip:(NSString *)tip cancel:(NSString *)cancel options:(NSArray *)options selectedIndex:(void(^)(NSInteger))selectedIndex;
++ (JYActionSheet *)actionSheetWithTip:(NSString *)tip cancel:(NSString *)cancel options:(NSArray *)options selectedIndex:(void(^)(NSInteger index))selectedIndex;
 @end

@@ -7,23 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1883B035224E075F0011A7AF /* JYCustomAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883B034224E075F0011A7AF /* JYCustomAlert.m */; };
 		1896105B224C627700F76E7A /* DrawTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896105A224C627700F76E7A /* DrawTestView.m */; };
+		18B36BD22251F0CB001F9A32 /* NSString+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */; };
+		18B36BD6225214F9001F9A32 /* CyclePageTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B36BD5225214F9001F9A32 /* CyclePageTestController.m */; };
+		18B36BD8225216DB001F9A32 /* CPTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B36BD7225216DB001F9A32 /* CPTestView.xib */; };
+		18B617AC224DEB1000BB4955 /* JYAlertTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B617AB224DEB1000BB4955 /* JYAlertTestController.m */; };
 		18C7874B2249F517009518D9 /* DrawRectTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7874A2249F516009518D9 /* DrawRectTestController.m */; };
 		1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */; };
 		1F0536AA213A6BE7001E5FBB /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053423213A6BE6001E5FBB /* UIImage+Extension.m */; };
-		1F0536AB213A6BE7001E5FBB /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053427213A6BE6001E5FBB /* UIImage+Compress.m */; };
-		1F0536AC213A6BE7001E5FBB /* UIView+Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05342A213A6BE6001E5FBB /* UIView+Filter.m */; };
-		1F0536AD213A6BE7001E5FBB /* UIView+Dashed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05342E213A6BE6001E5FBB /* UIView+Dashed.m */; };
-		1F0536AE213A6BE7001E5FBB /* UIViewController+PhoneCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053431213A6BE6001E5FBB /* UIViewController+PhoneCall.m */; };
-		1F0536AF213A6BE7001E5FBB /* NSMutableArray+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053433213A6BE6001E5FBB /* NSMutableArray+Adaptive.m */; };
-		1F0536B0213A6BE7001E5FBB /* NSDictionary+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053434213A6BE6001E5FBB /* NSDictionary+Json.m */; };
-		1F0536B1213A6BE7001E5FBB /* NSAttributedString+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053437213A6BE6001E5FBB /* NSAttributedString+Adaptive.m */; };
-		1F0536B2213A6BE7001E5FBB /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053438213A6BE6001E5FBB /* UIButton+EnlargeEdge.m */; };
-		1F0536B3213A6BE7001E5FBB /* CAShapeLayer+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053439213A6BE6001E5FBB /* CAShapeLayer+Draw.m */; };
-		1F0536B4213A6BE7001E5FBB /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05343A213A6BE6001E5FBB /* NSString+Time.m */; };
-		1F0536B5213A6BE7001E5FBB /* NSString+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05343B213A6BE6001E5FBB /* NSString+Adaptive.m */; };
-		1F0536B6213A6BE7001E5FBB /* UIImage+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05343D213A6BE6001E5FBB /* UIImage+QRCode.m */; };
-		1F0536B7213A6BE7001E5FBB /* NSString+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05343F213A6BE6001E5FBB /* NSString+Property.m */; };
 		1F0536B8213A6BE7001E5FBB /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053440213A6BE6001E5FBB /* UITextField+PlaceHolder.m */; };
 		1F0536B9213A6BE7001E5FBB /* NSObject+ExchangeToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053442213A6BE6001E5FBB /* NSObject+ExchangeToString.m */; };
 		1F0536BA213A6BE7001E5FBB /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053443213A6BE6001E5FBB /* NSString+Category.m */; };
@@ -150,8 +142,17 @@
 
 /* Begin PBXFileReference section */
 		0D7815E7ED8B00A86F9E814A /* Pods-LiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiftDemo/Pods-LiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1883B033224E075F0011A7AF /* JYCustomAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCustomAlert.h; sourceTree = "<group>"; };
+		1883B034224E075F0011A7AF /* JYCustomAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCustomAlert.m; sourceTree = "<group>"; };
 		18961059224C627700F76E7A /* DrawTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawTestView.h; sourceTree = "<group>"; };
 		1896105A224C627700F76E7A /* DrawTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawTestView.m; sourceTree = "<group>"; };
+		18B36BD02251F0CA001F9A32 /* NSString+Adaptive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Adaptive.h"; sourceTree = "<group>"; };
+		18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Adaptive.m"; sourceTree = "<group>"; };
+		18B36BD4225214F9001F9A32 /* CyclePageTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyclePageTestController.h; sourceTree = "<group>"; };
+		18B36BD5225214F9001F9A32 /* CyclePageTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyclePageTestController.m; sourceTree = "<group>"; };
+		18B36BD7225216DB001F9A32 /* CPTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CPTestView.xib; sourceTree = "<group>"; };
+		18B617AA224DEB1000BB4955 /* JYAlertTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAlertTestController.h; sourceTree = "<group>"; };
+		18B617AB224DEB1000BB4955 /* JYAlertTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAlertTestController.m; sourceTree = "<group>"; };
 		18C787492249F516009518D9 /* DrawRectTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectTestController.h; sourceTree = "<group>"; };
 		18C7874A2249F516009518D9 /* DrawRectTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectTestController.m; sourceTree = "<group>"; };
 		1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StatusBarStyle.m"; sourceTree = "<group>"; };
@@ -162,33 +163,6 @@
 		1F053421213A6BE6001E5FBB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		1F053422213A6BE6001E5FBB /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		1F053423213A6BE6001E5FBB /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		1F053425213A6BE6001E5FBB /* NSDictionary+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Json.h"; sourceTree = "<group>"; };
-		1F053426213A6BE6001E5FBB /* NSMutableArray+Adaptive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Adaptive.h"; sourceTree = "<group>"; };
-		1F053427213A6BE6001E5FBB /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
-		1F053428213A6BE6001E5FBB /* NSAttributedString+Adaptive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Adaptive.h"; sourceTree = "<group>"; };
-		1F053429213A6BE6001E5FBB /* ECategoty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECategoty.h; sourceTree = "<group>"; };
-		1F05342A213A6BE6001E5FBB /* UIView+Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Filter.m"; sourceTree = "<group>"; };
-		1F05342B213A6BE6001E5FBB /* CAShapeLayer+Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+Draw.h"; sourceTree = "<group>"; };
-		1F05342C213A6BE6001E5FBB /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
-		1F05342D213A6BE6001E5FBB /* NSString+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Property.h"; sourceTree = "<group>"; };
-		1F05342E213A6BE6001E5FBB /* UIView+Dashed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Dashed.m"; sourceTree = "<group>"; };
-		1F05342F213A6BE6001E5FBB /* UIImage+QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QRCode.h"; sourceTree = "<group>"; };
-		1F053430213A6BE6001E5FBB /* NSString+Adaptive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Adaptive.h"; sourceTree = "<group>"; };
-		1F053431213A6BE6001E5FBB /* UIViewController+PhoneCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PhoneCall.m"; sourceTree = "<group>"; };
-		1F053432213A6BE6001E5FBB /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
-		1F053433213A6BE6001E5FBB /* NSMutableArray+Adaptive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Adaptive.m"; sourceTree = "<group>"; };
-		1F053434213A6BE6001E5FBB /* NSDictionary+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Json.m"; sourceTree = "<group>"; };
-		1F053435213A6BE6001E5FBB /* UIView+Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Filter.h"; sourceTree = "<group>"; };
-		1F053436213A6BE6001E5FBB /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
-		1F053437213A6BE6001E5FBB /* NSAttributedString+Adaptive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Adaptive.m"; sourceTree = "<group>"; };
-		1F053438213A6BE6001E5FBB /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
-		1F053439213A6BE6001E5FBB /* CAShapeLayer+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+Draw.m"; sourceTree = "<group>"; };
-		1F05343A213A6BE6001E5FBB /* NSString+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Time.m"; sourceTree = "<group>"; };
-		1F05343B213A6BE6001E5FBB /* NSString+Adaptive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Adaptive.m"; sourceTree = "<group>"; };
-		1F05343C213A6BE6001E5FBB /* UIViewController+PhoneCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PhoneCall.h"; sourceTree = "<group>"; };
-		1F05343D213A6BE6001E5FBB /* UIImage+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QRCode.m"; sourceTree = "<group>"; };
-		1F05343E213A6BE6001E5FBB /* UIView+Dashed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Dashed.h"; sourceTree = "<group>"; };
-		1F05343F213A6BE6001E5FBB /* NSString+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Property.m"; sourceTree = "<group>"; };
 		1F053440213A6BE6001E5FBB /* UITextField+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolder.m"; sourceTree = "<group>"; };
 		1F053441213A6BE6001E5FBB /* UIView+AdaptivePerfect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdaptivePerfect.h"; sourceTree = "<group>"; };
 		1F053442213A6BE6001E5FBB /* NSObject+ExchangeToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ExchangeToString.m"; sourceTree = "<group>"; };
@@ -414,6 +388,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1883B032224E02110011A7AF /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1F053465213A6BE6001E5FBB /* JYActionSheet.h */,
+				1F053489213A6BE6001E5FBB /* JYActionSheet.m */,
+				1F05348B213A6BE6001E5FBB /* SLAlertView.h */,
+				1F053463213A6BE6001E5FBB /* SLAlertView.m */,
+				1883B033224E075F0011A7AF /* JYCustomAlert.h */,
+				1883B034224E075F0011A7AF /* JYCustomAlert.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		18B36BD322521494001F9A32 /* CyclePagerView */ = {
+			isa = PBXGroup;
+			children = (
+				18B36BD4225214F9001F9A32 /* CyclePageTestController.h */,
+				18B36BD5225214F9001F9A32 /* CyclePageTestController.m */,
+				18B36BD7225216DB001F9A32 /* CPTestView.xib */,
+			);
+			path = CyclePagerView;
+			sourceTree = "<group>";
+		};
+		18B617A9224DEA1000BB4955 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				18B617AA224DEB1000BB4955 /* JYAlertTestController.h */,
+				18B617AB224DEB1000BB4955 /* JYAlertTestController.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		18C787482249F4D6009518D9 /* DrawRect画圆弧 */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,8 +449,9 @@
 		1F05341B213A6BE6001E5FBB /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				18B36BD02251F0CA001F9A32 /* NSString+Adaptive.h */,
+				18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */,
 				1F053447213A6BE6001E5FBB /* Category.h */,
-				1F053424213A6BE6001E5FBB /* ElevenCategory */,
 				1F053420213A6BE6001E5FBB /* NSDate+Extension.h */,
 				1F053445213A6BE6001E5FBB /* NSDate+Extension.m */,
 				1F05341D213A6BE6001E5FBB /* NSObject+ExchangeToString.h */,
@@ -468,40 +475,6 @@
 				1F05344F213A6BE6001E5FBB /* UIView+Extension.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		1F053424213A6BE6001E5FBB /* ElevenCategory */ = {
-			isa = PBXGroup;
-			children = (
-				1F053425213A6BE6001E5FBB /* NSDictionary+Json.h */,
-				1F053426213A6BE6001E5FBB /* NSMutableArray+Adaptive.h */,
-				1F053427213A6BE6001E5FBB /* UIImage+Compress.m */,
-				1F053428213A6BE6001E5FBB /* NSAttributedString+Adaptive.h */,
-				1F053429213A6BE6001E5FBB /* ECategoty.h */,
-				1F05342A213A6BE6001E5FBB /* UIView+Filter.m */,
-				1F05342B213A6BE6001E5FBB /* CAShapeLayer+Draw.h */,
-				1F05342C213A6BE6001E5FBB /* UIButton+EnlargeEdge.h */,
-				1F05342D213A6BE6001E5FBB /* NSString+Property.h */,
-				1F05342E213A6BE6001E5FBB /* UIView+Dashed.m */,
-				1F05342F213A6BE6001E5FBB /* UIImage+QRCode.h */,
-				1F053430213A6BE6001E5FBB /* NSString+Adaptive.h */,
-				1F053431213A6BE6001E5FBB /* UIViewController+PhoneCall.m */,
-				1F053432213A6BE6001E5FBB /* NSString+Time.h */,
-				1F053433213A6BE6001E5FBB /* NSMutableArray+Adaptive.m */,
-				1F053434213A6BE6001E5FBB /* NSDictionary+Json.m */,
-				1F053435213A6BE6001E5FBB /* UIView+Filter.h */,
-				1F053436213A6BE6001E5FBB /* UIImage+Compress.h */,
-				1F053437213A6BE6001E5FBB /* NSAttributedString+Adaptive.m */,
-				1F053438213A6BE6001E5FBB /* UIButton+EnlargeEdge.m */,
-				1F053439213A6BE6001E5FBB /* CAShapeLayer+Draw.m */,
-				1F05343A213A6BE6001E5FBB /* NSString+Time.m */,
-				1F05343B213A6BE6001E5FBB /* NSString+Adaptive.m */,
-				1F05343C213A6BE6001E5FBB /* UIViewController+PhoneCall.h */,
-				1F05343D213A6BE6001E5FBB /* UIImage+QRCode.m */,
-				1F05343E213A6BE6001E5FBB /* UIView+Dashed.h */,
-				1F05343F213A6BE6001E5FBB /* NSString+Property.m */,
-			);
-			path = ElevenCategory;
 			sourceTree = "<group>";
 		};
 		1F053449213A6BE6001E5FBB /* UIButton-touch */ = {
@@ -557,9 +530,8 @@
 		1F05345E213A6BE6001E5FBB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				1883B032224E02110011A7AF /* Alert */,
 				1F05347F213A6BE6001E5FBB /* CryptionTool */,
-				1F053465213A6BE6001E5FBB /* JYActionSheet.h */,
-				1F053489213A6BE6001E5FBB /* JYActionSheet.m */,
 				1F053469213A6BE6001E5FBB /* JYSlideControl */,
 				1F05348D213A6BE6001E5FBB /* JYSoundTool */,
 				1F05347C213A6BE6001E5FBB /* NetWorkingTool.h */,
@@ -567,8 +539,6 @@
 				1F0534A3213A6BE6001E5FBB /* PopoverView */,
 				1F053476213A6BE6001E5FBB /* PrintChineseWords */,
 				1F05346C213A6BE6001E5FBB /* SelectTool */,
-				1F05348B213A6BE6001E5FBB /* SLAlertView.h */,
-				1F053463213A6BE6001E5FBB /* SLAlertView.m */,
 				1F05348C213A6BE6001E5FBB /* SLCollectionLogTool.h */,
 				1F053462213A6BE6001E5FBB /* SLCollectionLogTool.m */,
 				1F053492213A6BE6001E5FBB /* SLHud.h */,
@@ -1052,6 +1022,8 @@
 		8A320A6E2177172C00929BA4 /* 视图封装 */ = {
 			isa = PBXGroup;
 			children = (
+				18B36BD322521494001F9A32 /* CyclePagerView */,
+				18B617A9224DEA1000BB4955 /* AlertView */,
 				8A320A6F2177172C00929BA4 /* 多任务缩略图 */,
 			);
 			path = "视图封装";
@@ -1319,6 +1291,7 @@
 				1F0537B8213A6BE7001E5FBB /* MBProgressHUD.bundle in Resources */,
 				1F0537B5213A6BE7001E5FBB /* b27_icon_star_gray@2x.png in Resources */,
 				8A320AA72177172C00929BA4 /* gesture_normal@2x.png in Resources */,
+				18B36BD8225216DB001F9A32 /* CPTestView.xib in Resources */,
 				1F0536DA213A6BE7001E5FBB /* ssss.aif in Resources */,
 				1F0537A2213A6BE7001E5FBB /* placeholderImage.jpg in Resources */,
 			);
@@ -1398,7 +1371,6 @@
 				1F0536BF213A6BE7001E5FBB /* UIButton+Extension.m in Sources */,
 				8A320AAF2177172C00929BA4 /* BackGroundMaskView.m in Sources */,
 				8A320A9D2177172C00929BA4 /* FloorRoomsController.m in Sources */,
-				1F0536B3213A6BE7001E5FBB /* CAShapeLayer+Draw.m in Sources */,
 				1F0537DF213A6C16001E5FBB /* User.m in Sources */,
 				8A320AAC2177172C00929BA4 /* GestureLockShowController.m in Sources */,
 				1F0537B3213A6BE7001E5FBB /* JYStarRateView.m in Sources */,
@@ -1410,12 +1382,12 @@
 				1F0536C2213A6BE7001E5FBB /* WebLinkController.m in Sources */,
 				1F0536C0213A6BE7001E5FBB /* UIView+Extension.m in Sources */,
 				1F0536DC213A6BE7001E5FBB /* UICountingLabel.m in Sources */,
+				18B36BD6225214F9001F9A32 /* CyclePageTestController.m in Sources */,
 				1F0536CC213A6BE7001E5FBB /* SLHud.m in Sources */,
 				8A320AA12177172C00929BA4 /* AVPlayerShowController.m in Sources */,
 				1F0536EA213A6BE7001E5FBB /* YCXMenuItem.m in Sources */,
 				1F0536B8213A6BE7001E5FBB /* UITextField+PlaceHolder.m in Sources */,
 				1F0537CB213A6BE7001E5FBB /* CCPScrollView.m in Sources */,
-				1F0536B0213A6BE7001E5FBB /* NSDictionary+Json.m in Sources */,
 				1F0536BA213A6BE7001E5FBB /* NSString+Category.m in Sources */,
 				1F0536CF213A6BE7001E5FBB /* SelectScrollMenu.m in Sources */,
 				1F0537A0213A6BE7001E5FBB /* JYScrollItem.m in Sources */,
@@ -1425,9 +1397,9 @@
 				1F0536C8213A6BE7001E5FBB /* NetWorkingTool.m in Sources */,
 				1F67182F213D351200D796C3 /* main.m in Sources */,
 				1F0536D7213A6BE7001E5FBB /* AESTool.m in Sources */,
-				1F0536B1213A6BE7001E5FBB /* NSAttributedString+Adaptive.m in Sources */,
 				1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */,
 				8A320AB82177172C00929BA4 /* RegisterController.m in Sources */,
+				18B36BD22251F0CB001F9A32 /* NSString+Adaptive.m in Sources */,
 				1896105B224C627700F76E7A /* DrawTestView.m in Sources */,
 				8A320AAB2177172C00929BA4 /* ZLGestureLockViewController.m in Sources */,
 				1F0536C1213A6BE7001E5FBB /* UIView+AdaptivePerfect.m in Sources */,
@@ -1449,7 +1421,7 @@
 				1F0536EB213A6BE7001E5FBB /* OYCountDownManager.m in Sources */,
 				8A320ABB2177172C00929BA4 /* Parameter.m in Sources */,
 				1F05379F213A6BE7001E5FBB /* JYScrollItemModel.m in Sources */,
-				1F0536B6213A6BE7001E5FBB /* UIImage+QRCode.m in Sources */,
+				1883B035224E075F0011A7AF /* JYCustomAlert.m in Sources */,
 				1F0536C4213A6BE7001E5FBB /* EmptyClickView.m in Sources */,
 				1F0536D5213A6BE7001E5FBB /* Foundation+Log.m in Sources */,
 				1F0536D2213A6BE7001E5FBB /* SLImagePickerController.m in Sources */,
@@ -1459,7 +1431,6 @@
 				8A320AA02177172C00929BA4 /* ResumDownloadTool.m in Sources */,
 				8A320AB52177172C00929BA4 /* TYCyclePagerViewCell.m in Sources */,
 				1F0536E5213A6BE7001E5FBB /* SVProgressHUD+SL.m in Sources */,
-				1F0536B2213A6BE7001E5FBB /* UIButton+EnlargeEdge.m in Sources */,
 				1F0536C5213A6BE7001E5FBB /* EmptyView.m in Sources */,
 				8A320AB42177172C00929BA4 /* HallController.m in Sources */,
 				1F0536BE213A6BE7001E5FBB /* UIButton+touch.m in Sources */,
@@ -1467,31 +1438,24 @@
 				1F05373D213A6BE7001E5FBB /* PPNumberButton.m in Sources */,
 				1F0537B7213A6BE7001E5FBB /* MBProgressHUD+MJ.m in Sources */,
 				1F0536CA213A6BE7001E5FBB /* SLAlertView.m in Sources */,
-				1F0536B4213A6BE7001E5FBB /* NSString+Time.m in Sources */,
 				1F0536E9213A6BE7001E5FBB /* YCXMenu.m in Sources */,
-				1F0536AC213A6BE7001E5FBB /* UIView+Filter.m in Sources */,
 				1F0536BB213A6BE7001E5FBB /* NSDate+Extension.m in Sources */,
 				1F0536BC213A6BE7001E5FBB /* UIColor+Extension.m in Sources */,
-				1F0536AF213A6BE7001E5FBB /* NSMutableArray+Adaptive.m in Sources */,
 				1F0537BB213A6BE7001E5FBB /* YZPullDownMenu.m in Sources */,
 				1F0537BA213A6BE7001E5FBB /* YZCover.m in Sources */,
 				1F0537B6213A6BE7001E5FBB /* MBProgressHUD.m in Sources */,
-				1F0536B5213A6BE7001E5FBB /* NSString+Adaptive.m in Sources */,
 				8A320AAA2177172C00929BA4 /* ZLGestureLockView.m in Sources */,
 				8A320AB12177172C00929BA4 /* FloorModel.m in Sources */,
 				8A320AB62177172C00929BA4 /* LoginViewController.m in Sources */,
 				1F0537A1213A6BE7001E5FBB /* JYScrollView.m in Sources */,
-				1F0536B7213A6BE7001E5FBB /* NSString+Property.m in Sources */,
 				1F0536C9213A6BE7001E5FBB /* SLCollectionLogTool.m in Sources */,
 				1F0536CB213A6BE7001E5FBB /* UITextView+Placeholder.m in Sources */,
-				1F0536AE213A6BE7001E5FBB /* UIViewController+PhoneCall.m in Sources */,
 				1F0537DB213A6C16001E5FBB /* BaseNavigationController.m in Sources */,
 				1F0536D1213A6BE7001E5FBB /* SelectTool.m in Sources */,
-				1F0536AD213A6BE7001E5FBB /* UIView+Dashed.m in Sources */,
 				8A320AA32177172C00929BA4 /* MotionShowController.m in Sources */,
 				8A320AAD2177172C00929BA4 /* BackGroundCustomMask.m in Sources */,
 				8A320AB22177172C00929BA4 /* FloorCell.m in Sources */,
-				1F0536AB213A6BE7001E5FBB /* UIImage+Compress.m in Sources */,
+				18B617AC224DEB1000BB4955 /* JYAlertTestController.m in Sources */,
 				1F0536C3213A6BE7001E5FBB /* SLDevider.m in Sources */,
 				1F0536BD213A6BE7001E5FBB /* UIButton+Delay.m in Sources */,
 				1F0536D3213A6BE7001E5FBB /* NSArray+HYBUnicodeReadable.m in Sources */,

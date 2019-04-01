@@ -7,7 +7,6 @@
 //
 
 #import "XCNetworking.h"
-#import "UIImage+Compress.h"
 #import "NSObject+YYModel.h"
 #import "SVProgressHUD.h"
 #import "SLAlertView.h"
@@ -27,12 +26,11 @@
 //NSString * const baseImageUrl = @"https://img.51kcwc.com";
 //#else
 //// 测试接口
-//NSString * const baseUrl      = @"http://car.i.cacf.cn/";
+NSString * const baseUrl      = @"http://car.i.cacf.cn/";
 //NSString * const baseWebUrl   = @"http://car.i.cacf.cn/";
 //NSString * const baseImageUrl = @"http://img.i.cacf.cn";
 //
 //#endif
-NSString * const baseUrl = @"http://sb-bcmp.prdasbbwla1.com/zh-cn/";
 
 
 

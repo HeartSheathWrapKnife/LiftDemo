@@ -12,6 +12,7 @@
 #define RGBAColor(r, g, b, a)  [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]//RGB alpha
 #define HexColorInt32_t(rgbValue) \
 [UIColor colorWithRed:((float)((0x##rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((0x##rgbValue & 0x00FF00) >> 8))/255.0 blue:((float)(0x##rgbValue & 0x0000FF))/255.0  alpha:1]
+#define HexColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define SetBackgroundGrayColor self.view.backgroundColor = HexColorInt32_t(F8F8F8);// 背景颜色
 #define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]//随机颜色
 #define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))//随机颜色
@@ -45,6 +46,7 @@
 #define HalfScreenHeight [UIScreen mainScreen].bounds.size.height * 0.5
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenSize [UIScreen mainScreen].bounds.size
 #define kHalfScreenWidth  [UIScreen mainScreen].bounds.size.width * 0.5
 #define kHalfScreenHeight [UIScreen mainScreen].bounds.size.height * 0.5
 

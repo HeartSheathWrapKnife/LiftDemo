@@ -62,7 +62,10 @@
 
     self.dataArr = @[[FloorModel modelWithTitle:@"多任务缩略图"
                                            desc:@"显示自定义页面或模糊当前页面"
-                                      className:@"BackGroundMaskTestController"]];
+                                      className:@"BackGroundMaskTestController"],
+                     [FloorModel modelWithTitle:@"alertTest"
+                                           desc:@"弹窗"
+                                      className:@"JYAlertTestController"]];
     
 }
 

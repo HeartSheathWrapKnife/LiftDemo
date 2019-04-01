@@ -3,7 +3,7 @@
 //  XunChangApp
 //
 //  Created by Eleven on 16/8/31.
-//  Copyright © 2016年 zhangyong. All rights reserved.
+//  Copyright © 2016年 lostifor. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

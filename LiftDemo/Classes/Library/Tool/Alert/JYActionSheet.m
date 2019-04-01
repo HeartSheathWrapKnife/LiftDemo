@@ -32,13 +32,11 @@ static NSInteger rowCount = 0;
 
 @implementation JYActionSheet
 
-+ (JYActionSheet *)actionSheetWithTip:(NSString *)tip cancel:(NSString *)cancel options:(NSArray *)options selectedIndex:(void (^)(NSInteger))selectedIndex {
++ (JYActionSheet *)actionSheetWithTip:(NSString *)tip cancel:(NSString *)cancel options:(NSArray *)options selectedIndex:(void (^)(NSInteger index))selectedIndex {
     if (selectedIndex) selectedBlcok = [selectedIndex copy];
     //行数
     int count = 0;
-//    if (tip) count ++;
     if (options) count += options.count;
-//    if (cancel) count++;
     rowCount = count;
     
     JYActionSheet *actionSheet = [[JYActionSheet alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
@@ -46,17 +44,18 @@ static NSInteger rowCount = 0;
     actionSheet.userInteractionEnabled = YES;
     actionSheet.backgroundColor = RGBAColor(0, 0, 0, 0.4);
     actionSheet.alpha = 0;
+    [actionSheet addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)]];
     dataArray = options;
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:actionSheet];
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:actionSheet action:@selector(tap)];
-//    [window addGestureRecognizer:tap];
+    
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,ScreenHeight, ScreenWidth, ScreenHeight*0.618)];
     view.backgroundColor = [UIColor whiteColor];
     [actionSheet addSubview:view];
     actionSheet.body = view;
+    
     /// 标题
     UIView *tipView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 44)];
     [view addSubview:tipView];
@@ -112,28 +111,26 @@ static NSInteger rowCount = 0;
         sheet.alpha = 1;
         
     } completion:nil];
-
-    
 }
-- (void)dismiss {
+
++ (void)dismiss {
     [UIView animateWithDuration:0.25 animations:^{
         CGRect frame = sheet.body.frame;
         frame.origin.y = ScreenHeight;
         sheet.body.frame = frame;
-        self.alpha = 0;
+        sheet.alpha = 0;
     } completion:^(BOOL finished) {
         [sheet removeFromSuperview];
+        sheet = nil;
+        selectedBlcok = nil;
     }];
+}
 
-    
-}
+
 - (void)cancelBtnAction {
-    [self dismiss];
+    [JYActionSheet dismiss];
 }
-- (void)tap {
-    [self dismiss];
-    
-}
+
 #pragma mark UITableViewDelegate & UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -170,7 +167,7 @@ static NSInteger rowCount = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BLOCK_SAFE_RUN(selectedBlcok,indexPath.row);
-    [self dismiss];
+    [JYActionSheet dismiss];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
