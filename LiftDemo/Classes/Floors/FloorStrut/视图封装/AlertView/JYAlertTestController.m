@@ -37,8 +37,8 @@
 }
 
 - (void)setupInitializeData {
-    self.titles = @[@"alert1",@"alert2",@"alert3",@"alert4",@"custom"];
-    self.subTitles = @[@"alert1--",@"alert2--",@"alert3--",@"alert4--",@"custom--"];
+    self.titles = @[@"alert1",@"alert2",@"alert3",@"alert4",@"custom",@"modalPresentVC"];
+    self.subTitles = @[@"alert1--",@"alert2--",@"alert3--",@"alert4--",@"custom--",@"present 透明控制器"];
     [self.tableView reloadData];
 }
 
@@ -50,7 +50,7 @@
 ///  设置自定义导航条
 - (void)setupNavigationBar {
     @weakify(self);
-    NSString * title = @"alert";
+    NSString * title = @"Alert";
     self.xc_navgationBar = [XCNavigationBar navWithTitle:title backAction:^{
         @strongify(self);
         [self.navigationController popViewControllerAnimated:YES];
@@ -105,10 +105,31 @@
         }];
     }
     if (index == 4) {
-        [JYCustomAlert alertWithCustomViewHandle:^(id  _Nullable obj) {
+        UIView *view = [UIView viewWithBgColor:[UIColor redColor] frame:Rect(0, 0, Fit(320), 300)];
+        
+        [JYCustomAlert alertWithCustomView:view Handle:^(id  _Nullable obj) {
             
         }];
     }
+    if (index == 5) {
+        //present
+        UIViewController *vc = [[UIViewController alloc] init];
+        vc.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        float version = [UIDevice currentDevice].systemVersion.floatValue;
+        if (version < 8.0) {
+            self.modalPresentationStyle = UIModalPresentationCurrentContext;
+            [self.view.window.rootViewController presentViewController:vc animated:NO completion:^{
+            }];
+        } else {
+            vc.modalPresentationStyle = UIModalPresentationOverCurrentContext|UIModalPresentationFullScreen;
+            
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
+        }
+    }
+    
+    
 }
 
 

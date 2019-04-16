@@ -14,7 +14,7 @@ static HandleBlock block = nil;
 
 @implementation JYCustomAlert
 
-+ (void)alertWithCustomViewHandle:(HandleBlock)handle {
++ (void)alertWithCustomView:(UIView *)cview Handle:(_Nullable HandleBlock)handle {
     if (handle) {
         block = [handle copy];
     }
@@ -22,16 +22,12 @@ static HandleBlock block = nil;
     JYCustomAlert *view = [[JYCustomAlert alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     alertView = view;
     view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
-    [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelAction)]];
+    [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:view action:@selector(cancelAction)]];
+    view.alpha = 0;
     
-    //custom View
-    UIView * content = [[UIView alloc] initWithFrame:Rect(0, kScreenHeight, kScreenWidth, 100)];
-    content.backgroundColor = [UIColor whiteColor];
-    customView = content;
-    
-    content.height = content.maxY;
-    view.hidden = YES;
-    [view addSubview:content];
+    customView = cview;
+    cview.center = view.center;
+    [view addSubview:cview];
     
     [[UIApplication sharedApplication].keyWindow addSubview:view];
     [view show];
@@ -39,10 +35,8 @@ static HandleBlock block = nil;
 
 #pragma mark status
 - (void)show {
-    
     [UIView animateWithDuration:0.25 animations:^{
         CGRect frame = customView.frame;
-        frame.origin.y = kScreenHeight - CGRectGetHeight(customView.frame);
         customView.frame = frame;
         alertView.alpha = 1;
         
@@ -52,16 +46,13 @@ static HandleBlock block = nil;
 - (void)cancelAction {
     [JYCustomAlert dismiss];
 }
+
 + (void)dismiss {
     [UIView animateWithDuration:0.25 animations:^{
-        CGRect frame = customView.frame;
-        frame.origin.y = kScreenHeight;
-        customView.frame = frame;
         alertView.alpha = 0;
     } completion:^(BOOL finished) {
         [alertView removeFromSuperview];
         alertView = nil;
-        customView = nil;
         block = nil;
     }];
 }
