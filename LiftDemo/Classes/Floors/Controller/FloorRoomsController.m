@@ -65,7 +65,10 @@
                                       className:@"BackGroundMaskTestController"],
                      [FloorModel modelWithTitle:@"alertTest"
                                            desc:@"弹窗"
-                                      className:@"JYAlertTestController"]];
+                                      className:@"JYAlertTestController"],
+                     [FloorModel modelWithTitle:@"cycleView"
+                                           desc:@"轮播"
+                                      className:@"CyclePageTestController"]];
     
 }
 
