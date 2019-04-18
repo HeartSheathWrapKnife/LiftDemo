@@ -14,7 +14,9 @@ static HandleBlock block = nil;
 
 @implementation JYCustomAlert
 
-+ (void)alertWithCustomView:(UIView *)cview Handle:(_Nullable HandleBlock)handle {
++ (void)alertWithCustomView:(UIView *)customView
+                  touchBack:(BOOL)enable
+                eventHandle:(_Nullable HandleBlock)handle {
     if (handle) {
         block = [handle copy];
     }
@@ -25,10 +27,15 @@ static HandleBlock block = nil;
     [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:view action:@selector(cancelAction)]];
     view.alpha = 0;
     
-    customView = cview;
-    cview.center = view.center;
-    [view addSubview:cview];
+    customView = customView;
+    customView.center = view.center;
+    [view addSubview:customView];
     
+    //蒙版是否可以点击收回
+    if (enable) {
+        [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:view action:@selector(cancelAction)]];
+        [customView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:view action:@selector(customViewTap)]];
+    }
     [[UIApplication sharedApplication].keyWindow addSubview:view];
     [view show];
 }
@@ -45,6 +52,10 @@ static HandleBlock block = nil;
 
 - (void)cancelAction {
     [JYCustomAlert dismiss];
+}
+
+- (void)customViewTap {
+    NSLog(@"点击alert");
 }
 
 + (void)dismiss {

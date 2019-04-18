@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@interface JYSheetModel : NSObject
+@property (nonatomic,   copy) NSString * title;
+@end
+
+
 @interface JYActionSheet : UIView
 
-/**
- 创建actionsheet
-
- @param tip 提示信息
- @param cancel 取消提示文字
- @param options 选项列表
- @param selectedIndex 选择的index
- */
-+ (JYActionSheet *)actionSheetWithTip:(NSString *)tip cancel:(NSString *)cancel options:(NSArray *)options selectedIndex:(void(^)(NSInteger index))selectedIndex;
++ (JYActionSheet *)actionSheetWithTip:(NSString *)tip
+                                   cancel:(NSString *)cancel
+                                  options:(NSArray <JYSheetModel *>*)options
+                            selectedIndex:(void (^)(NSInteger index))selectedIndex;
 @end

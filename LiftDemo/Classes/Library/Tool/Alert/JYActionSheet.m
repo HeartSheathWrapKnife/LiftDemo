@@ -11,21 +11,15 @@
 typedef void (^SelectedBlock)(NSInteger index);
 static JYActionSheet * sheet = nil;
 static SelectedBlock selectedBlcok = nil;
-static NSArray *dataArray = nil;
+static NSArray <JYSheetModel *>*dataArray = nil;
 static NSInteger rowCount = 0;
 
+@implementation JYSheetModel
 
-//#define ScreenHeight     _getScreenHeight()
-//#define ScreenWidth      _getScreenWidth()
-//
-//#define HexColorInt32_t(rgbValue) \
-//[UIColor colorWithRed:((float)((0x##rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((0x##rgbValue & 0x00FF00) >> 8))/255.0 blue:((float)(0x##rgbValue & 0x0000FF))/255.0  alpha:1]
-//
-//#define RGBAColor(r, g, b, a)  [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]//RGB alpha
-//#define BLOCK_SAFE_RUN(block, ...) block ? block(__VA_ARGS__) : nil;
+@end
 
 
-@interface JYActionSheet ()<UITableViewDelegate,UITableViewDataSource>
+@interface JYActionSheet ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 @property (nonatomic,   weak) UITableView * tableView;
 @property (nonatomic,   weak) UIView * body;
 @end
@@ -36,28 +30,40 @@ static NSInteger rowCount = 0;
     if (selectedIndex) selectedBlcok = [selectedIndex copy];
     //行数
     int count = 0;
+    //    if (tip) count ++;
     if (options) count += options.count;
+    //    if (cancel) count++;
     rowCount = count;
     
-    JYActionSheet *actionSheet = [[JYActionSheet alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    JYActionSheet *actionSheet = [[JYActionSheet alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     sheet = actionSheet;
     actionSheet.userInteractionEnabled = YES;
     actionSheet.backgroundColor = RGBAColor(0, 0, 0, 0.4);
     actionSheet.alpha = 0;
-    [actionSheet addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)]];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:actionSheet action:@selector(dismiss)];
+    tap.delegate = actionSheet;
+    [actionSheet addGestureRecognizer:tap];
     dataArray = options;
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:actionSheet];
+    //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:actionSheet action:@selector(tap)];
+    //    [window addGestureRecognizer:tap];
     
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,ScreenHeight, ScreenWidth, ScreenHeight*0.618)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,kScreenHeight, kScreenWidth, kScreenHeight*0.618)];
+    float contentH = options.count*68;
+    if (contentH < kScreenHeight*0.618) {
+        if (cancel) {
+            view.height = contentH + 44;
+        } else {
+            view.height = contentH;
+        }
+    }
     view.backgroundColor = [UIColor whiteColor];
     [actionSheet addSubview:view];
     actionSheet.body = view;
-    
     /// 标题
-    UIView *tipView = [[UIView alloc] initWithFrame:CGRectMake(0,0, ScreenWidth, 44)];
+    UIView *tipView = [[UIView alloc] initWithFrame:CGRectMake(0,0, kScreenWidth, 44)];
     [view addSubview:tipView];
     
     UIView * devider = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(tipView.bounds) - 0.5, [UIScreen mainScreen].bounds.size.width, 0.5)];
@@ -65,7 +71,7 @@ static NSInteger rowCount = 0;
     devider.alpha = 0.2;
     [tipView addSubview:devider];
     
-    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, CGRectGetHeight(tipView.bounds) - 0.5)];
+    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, CGRectGetHeight(tipView.bounds) - 0.5)];
     tipLabel.text = tip;
     tipLabel.backgroundColor = [UIColor whiteColor];
     tipLabel.textAlignment = NSTextAlignmentCenter;
@@ -75,7 +81,7 @@ static NSInteger rowCount = 0;
     
     
     
-    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,44, ScreenWidth, CGRectGetHeight(view.bounds) - 44*2) style:UITableViewStylePlain];
+    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,44, kScreenWidth, CGRectGetHeight(view.bounds) - 44) style:UITableViewStylePlain];
     tableView.backgroundColor = [UIColor clearColor];
     tableView.showsVerticalScrollIndicator = YES;//显示水平滑条
     tableView.delegate = actionSheet;
@@ -84,17 +90,19 @@ static NSInteger rowCount = 0;
     //tableView.scrollEnabled = NO;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;//分割线
     [view addSubview:tableView];
+    if (cancel) {
+        UIButton * cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        cancelBtn.frame = CGRectMake(0, CGRectGetMaxY(tableView.frame), kScreenWidth, 44);
+        cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        cancelBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [cancelBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [cancelBtn addTarget:actionSheet action:@selector(cancelBtnAction) forControlEvents:UIControlEventTouchUpInside];
+        [cancelBtn setTitle:cancel forState:UIControlStateNormal];
+        [view addSubview:cancelBtn];
+    }
     
-    UIButton * cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelBtn.frame = CGRectMake(0, CGRectGetMaxY(tableView.frame), ScreenWidth, 44);
-    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-    cancelBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [cancelBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [cancelBtn addTarget:actionSheet action:@selector(cancelBtnAction) forControlEvents:UIControlEventTouchUpInside];
-    [cancelBtn setTitle:cancel forState:UIControlStateNormal];
-    [view addSubview:cancelBtn];
     
-    UIView * cDevider = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(tableView.frame), ScreenWidth, 0.5)];
+    UIView * cDevider = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(tableView.frame), kScreenWidth, 0.5)];
     cDevider.backgroundColor = [UIColor lightGrayColor];
     cDevider.alpha = 0.2;
     [tipView addSubview:cDevider];
@@ -113,24 +121,25 @@ static NSInteger rowCount = 0;
     } completion:nil];
 }
 
-+ (void)dismiss {
+- (void)dismiss {
     [UIView animateWithDuration:0.25 animations:^{
         CGRect frame = sheet.body.frame;
-        frame.origin.y = ScreenHeight;
+        frame.origin.y = kScreenHeight;
         sheet.body.frame = frame;
-        sheet.alpha = 0;
+        self.alpha = 0;
     } completion:^(BOOL finished) {
         [sheet removeFromSuperview];
-        sheet = nil;
-        selectedBlcok = nil;
     }];
 }
 
 
 - (void)cancelBtnAction {
-    [JYActionSheet dismiss];
+    [self dismiss];
 }
 
+- (void)tap {
+    [self dismiss];
+}
 #pragma mark UITableViewDelegate & UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -141,11 +150,11 @@ static NSInteger rowCount = 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 60;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 60;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -158,7 +167,7 @@ static NSInteger rowCount = 0;
     }
     
     
-    cell.textLabel.text = dataArray[indexPath.row];
+    cell.textLabel.text = dataArray[indexPath.row].title;
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -167,7 +176,7 @@ static NSInteger rowCount = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BLOCK_SAFE_RUN(selectedBlcok,indexPath.row);
-    [JYActionSheet dismiss];
+    [self dismiss];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -183,7 +192,12 @@ static NSInteger rowCount = 0;
     return 0;
 }
 
-
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    if ([touch.view isDescendantOfView:self.tableView]) {
+        return NO;
+    }
+    return YES;
+}
 
 /// 分割线
 + (UIView *)makeDiveder

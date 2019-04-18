@@ -14,6 +14,7 @@
 		18B36BD8225216DB001F9A32 /* CPTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B36BD7225216DB001F9A32 /* CPTestView.xib */; };
 		18B617AC224DEB1000BB4955 /* JYAlertTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B617AB224DEB1000BB4955 /* JYAlertTestController.m */; };
 		18C7874B2249F517009518D9 /* DrawRectTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7874A2249F516009518D9 /* DrawRectTestController.m */; };
+		18F385512265817900E3A91F /* JYCustomAleartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F385502265817900E3A91F /* JYCustomAleartVC.m */; };
 		1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */; };
 		1F0536AA213A6BE7001E5FBB /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053423213A6BE6001E5FBB /* UIImage+Extension.m */; };
 		1F0536B8213A6BE7001E5FBB /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053440213A6BE6001E5FBB /* UITextField+PlaceHolder.m */; };
@@ -155,6 +156,8 @@
 		18B617AB224DEB1000BB4955 /* JYAlertTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAlertTestController.m; sourceTree = "<group>"; };
 		18C787492249F516009518D9 /* DrawRectTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectTestController.h; sourceTree = "<group>"; };
 		18C7874A2249F516009518D9 /* DrawRectTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectTestController.m; sourceTree = "<group>"; };
+		18F3854F2265817900E3A91F /* JYCustomAleartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCustomAleartVC.h; sourceTree = "<group>"; };
+		18F385502265817900E3A91F /* JYCustomAleartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCustomAleartVC.m; sourceTree = "<group>"; };
 		1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StatusBarStyle.m"; sourceTree = "<group>"; };
 		1F05341D213A6BE6001E5FBB /* NSObject+ExchangeToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ExchangeToString.h"; sourceTree = "<group>"; };
 		1F05341E213A6BE6001E5FBB /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
@@ -397,6 +400,8 @@
 				1F053463213A6BE6001E5FBB /* SLAlertView.m */,
 				1883B033224E075F0011A7AF /* JYCustomAlert.h */,
 				1883B034224E075F0011A7AF /* JYCustomAlert.m */,
+				18F3854F2265817900E3A91F /* JYCustomAleartVC.h */,
+				18F385502265817900E3A91F /* JYCustomAleartVC.m */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -1396,6 +1401,7 @@
 				8A320AB92177172C00929BA4 /* MineViewController.m in Sources */,
 				1F0536C8213A6BE7001E5FBB /* NetWorkingTool.m in Sources */,
 				1F67182F213D351200D796C3 /* main.m in Sources */,
+				18F385512265817900E3A91F /* JYCustomAleartVC.m in Sources */,
 				1F0536D7213A6BE7001E5FBB /* AESTool.m in Sources */,
 				1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */,
 				8A320AB82177172C00929BA4 /* RegisterController.m in Sources */,

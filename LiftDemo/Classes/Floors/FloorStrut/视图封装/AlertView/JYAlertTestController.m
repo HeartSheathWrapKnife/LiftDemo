@@ -10,6 +10,7 @@
 #import "SLAlertView.h"
 #import "JYActionSheet.h"
 #import "JYCustomAlert.h"
+#import "JYCustomAleartVC.h"
 
 @interface JYAlertTestController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic,strong) UITableView * tableView;
@@ -37,8 +38,8 @@
 }
 
 - (void)setupInitializeData {
-    self.titles = @[@"alert1",@"alert2",@"alert3",@"alert4",@"custom",@"modalPresentVC"];
-    self.subTitles = @[@"alert1--",@"alert2--",@"alert3--",@"alert4--",@"custom--",@"present 透明控制器"];
+    self.titles = @[@"actionSheet",@"actionSheet根据内容",@"alert3",@"alert4",@"custom",@"modalPresentVC"];
+    self.subTitles = @[@"仿wx-actionsheet",@"超过最大高度滑动",@"alert3--",@"alert4--",@"keywindow 弹出 customview--",@"present 透明控制器"];
     [self.tableView reloadData];
 }
 
@@ -74,7 +75,6 @@
 - (void)actionAlertWithIndex:(NSInteger)index {
     
     NSArray *options = @[@"1",@"2"];
-    NSArray *longOptions = @[@"1",@"2",@"3",@"4",@"2",@"3",@"4",@"2",@"3",@"4"];
     NSString *cancelStr = @"取消";
     NSString *sureStr = @"确定";
     NSString *titleStr = @"标题";
@@ -87,9 +87,14 @@
         }];
     }
     if (index == 1) {
-        [JYActionSheet actionSheetWithTip:titleStr cancel:cancelStr options:longOptions selectedIndex:^(NSInteger index) {
-            NSString *tip = [NSString stringWithFormat:@"选中%zd",index];
-            SVShowSuccess(tip);
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i < 2; i ++) {
+            JYSheetModel *model = [JYSheetModel new];
+            model.title = [NSString stringWithFormat:@"---------%d---------",i];
+            [array addObject:model];
+        }
+        [JYActionSheet actionSheetWithTip:@"选择" cancel:@"取消" options:array selectedIndex:^(NSInteger index) {
+            
         }];
     }
     if (index == 2) {
@@ -105,16 +110,25 @@
         }];
     }
     if (index == 4) {
-        UIView *view = [UIView viewWithBgColor:[UIColor redColor] frame:Rect(0, 0, Fit(320), 300)];
-        
-        [JYCustomAlert alertWithCustomView:view Handle:^(id  _Nullable obj) {
+        UIView *view = [UIView viewWithBgColor:[UIColor whiteColor] frame:Rect(0, 0, Fit(320), 300)];
+        UILabel *tlabel = [UILabel labelWithText:@"customview" font:14 textColor:[UIColor blackColor] frame:Rect(0, 0, view.width, view.height)];
+        tlabel.textAlignment = NSTextAlignmentCenter;
+        [view addSubview:tlabel];
+        [JYCustomAlert alertWithCustomView:view touchBack:YES eventHandle:^(id  _Nullable obj) {
             
         }];
     }
     if (index == 5) {
         //present
-        UIViewController *vc = [[UIViewController alloc] init];
-        vc.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        UIView *view = [UIView viewWithBgColor:[UIColor whiteColor] frame:Rect(0, 0, Fit(320), 300)];
+        UILabel *tlabel = [UILabel labelWithText:@"present customview" font:14 textColor:[UIColor blackColor] frame:Rect(0, 0, view.width, view.height)];
+        tlabel.textAlignment = NSTextAlignmentCenter;
+        [view addSubview:tlabel];
+        
+        JYCustomAleartVC *vc = [[JYCustomAleartVC alloc] init];
+        vc.touchBack = YES;
+        vc.customView = view;
+        vc.customView.center = vc.view.center;
         float version = [UIDevice currentDevice].systemVersion.floatValue;
         if (version < 8.0) {
             self.modalPresentationStyle = UIModalPresentationCurrentContext;
@@ -122,11 +136,11 @@
             }];
         } else {
             vc.modalPresentationStyle = UIModalPresentationOverCurrentContext|UIModalPresentationFullScreen;
-            
             [self presentViewController:vc animated:NO completion:^{
                 
             }];
         }
+        
     }
     
     

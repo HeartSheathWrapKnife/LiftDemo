@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^HandleBlock)(_Nullable id obj);
 
 @interface JYCustomAlert : UIView
-+ (void)alertWithCustomView:(UIView *)customView Handle:(_Nullable HandleBlock)handle;
++ (void)alertWithCustomView:(UIView *)customView
+                  touchBack:(BOOL)enable
+                eventHandle:(_Nullable HandleBlock)handle;
 
 + (void)dismiss;
 @end

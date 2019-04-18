@@ -46,12 +46,8 @@
 
 ///  设置自定义导航条
 - (void)setupNavigationBar {
-    @weakify(self);
     NSString * title = @"hall";
-    self.xc_navgationBar = [XCNavigationBar navWithTitle:title backAction:^{
-        @strongify(self);
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+    self.xc_navgationBar = [XCNavigationBar navWithTitle:title];
 }
 
 
