@@ -29,6 +29,20 @@
 + (NSString *)removeHTML:(NSString *)html;
 + (NSString *)removeHTML2:(NSString *)html;
 
+//验证是否有效银行卡
++ (BOOL)validateBankCard:(NSString *)bankCard;
+
+//验证IP合法性
++ (BOOL)validateIP:(NSString *)IP;
+- (BOOL)isValidIP;
+
+//验证url
++ (BOOL)validateUrl:(NSString *)url;
+- (BOOL)validateUrl;
+
+//验证全汉字
++ (BOOL)validateChinese:(NSString *)chinese;
+- (BOOL)validateChinese;
 /** 验证email */
 + (BOOL)validateEmail:(NSString *)email;
 - (BOOL)validateEmail;
@@ -40,13 +54,22 @@
 /** 字符串是否包含特殊字符 */
 - (BOOL)isIncludeSpecialCharact;
 
++ (BOOL) validateUserName:(NSString *)name;
+
 /** (由英文、数字和下划线构成，6-18位，首字母只能是英文和数字) */
 + (BOOL)validatePassword:(NSString *)passWord;
 - (BOOL)validatePassword;
 
-/** (验证身份证号码-中国大陆) */
+/** (验证身份证号码-中国大陆) 简单版本 */
 + (BOOL) validateIdentityCard: (NSString *)identityCard;
 - (BOOL) validateIdentityCard;
+
+//身份证验证 加权版本
++ (BOOL)validateIDCardNumber:(NSString *)value;
+- (BOOL)validateIDCardNumber;
+
+//字符包含 汉字
++ (BOOL)hasChinese:(NSString *)str;
 
 /// 将int类型转成NSString
 FOUNDATION_EXTERN NSString * stringWithInt(int number);
@@ -92,6 +115,11 @@ FOUNDATION_EXTERN NSString * stringWithDoubleAndDecimalCount(double number, unsi
  */
 + (CGSize)labelAutoCalculateRectWith:(NSString*)text FontSize:(CGFloat)fontSize MaxSize:(CGSize)maxSize;
 
-//系统当前时间戳
-+ (NSString *)systemCurrentTimestamp;
+//保留几位小数
++ (NSString *)decimalwithFormat:(NSString *)format  floatV:(float)floatV;
+
++ (NSString *)decimalwithFloatV:(float)floatV;
+
++ (NSString *)KGFormatScale:(id)scale;
+
 @end

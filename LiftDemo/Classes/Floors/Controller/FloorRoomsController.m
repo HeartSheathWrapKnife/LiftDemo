@@ -53,6 +53,8 @@
         [self initDataWithSensor];
     } else if ([self.sectionName isEqualToString:@"demo"]) {
         [self initDataWithDemo];
+    } else if ([self.sectionName isEqualToString:@"Tools"]){
+        [self initDataWithTools];
     } else {
         SLLog(@"??未知分类名");
     }
@@ -92,7 +94,10 @@
 
     self.dataArr = @[[FloorModel modelWithTitle:@"摇一摇"
                                            desc:@"陀螺仪实现，添加震动反馈演示，触发灵敏度可调"
-                                      className:@"MotionShowController"]];
+                                      className:@"MotionShowController"],
+                     [FloorModel modelWithTitle:@"指纹解锁"
+                                           desc:@"manager"
+                                      className:@"LocalVerifyTestController"],];
     
 }
 
@@ -106,6 +111,16 @@
                                       className:@"AVPlayerShowController"],];
 }
 
+
+- (void)initDataWithTools {
+    self.dataArr = @[[FloorModel modelWithTitle:@"分贝计 - 麦克风测噪音"
+                                           desc:@"AVAudioRecorder实现"
+                                      className:@"NoiseTestController"],
+                     [FloorModel modelWithTitle:@"磁力计 - 指南针"
+                                           desc:@"CLLocationManager + CMMotionManager 实现"
+                                      className:@"CompassController"],];
+    
+}
 
 
 ///  初始化子控件

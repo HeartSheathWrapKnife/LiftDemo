@@ -132,11 +132,11 @@
         float version = [UIDevice currentDevice].systemVersion.floatValue;
         if (version < 8.0) {
             self.modalPresentationStyle = UIModalPresentationCurrentContext;
-            [self.view.window.rootViewController presentViewController:vc animated:NO completion:^{
+            [self.view.window.rootViewController presentViewController:vc animated:YES completion:^{
             }];
         } else {
             vc.modalPresentationStyle = UIModalPresentationOverCurrentContext|UIModalPresentationFullScreen;
-            [self presentViewController:vc animated:NO completion:^{
+            [self presentViewController:vc animated:YES completion:^{
                 
             }];
         }

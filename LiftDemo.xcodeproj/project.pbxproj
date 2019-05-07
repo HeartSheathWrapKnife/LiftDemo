@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185E2E64226EF68C00F8ADC6 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E2E63226EF68C00F8ADC6 /* SensorController.m */; };
+		185E2E67226F07CF00F8ADC6 /* LocalVerifyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E2E66226F07CF00F8ADC6 /* LocalVerifyManager.m */; };
+		185E2E6A226F0CB800F8ADC6 /* LocalVerifyTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E2E69226F0CB800F8ADC6 /* LocalVerifyTestController.m */; };
 		1883B035224E075F0011A7AF /* JYCustomAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883B034224E075F0011A7AF /* JYCustomAlert.m */; };
 		1896105B224C627700F76E7A /* DrawTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896105A224C627700F76E7A /* DrawTestView.m */; };
 		18B36BD22251F0CB001F9A32 /* NSString+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */; };
@@ -14,6 +17,11 @@
 		18B36BD8225216DB001F9A32 /* CPTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B36BD7225216DB001F9A32 /* CPTestView.xib */; };
 		18B617AC224DEB1000BB4955 /* JYAlertTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B617AB224DEB1000BB4955 /* JYAlertTestController.m */; };
 		18C7874B2249F517009518D9 /* DrawRectTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7874A2249F516009518D9 /* DrawRectTestController.m */; };
+		18ECC005228127A400CAA20E /* NoiseTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECC004228127A400CAA20E /* NoiseTestController.m */; };
+		18ECC0082281285A00CAA20E /* NoiseTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECC0072281285A00CAA20E /* NoiseTestView.m */; };
+		18ECC00B22816B9A00CAA20E /* CompassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECC00A22816B9A00CAA20E /* CompassController.m */; };
+		18ECC00E22816D0C00CAA20E /* CompassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECC00D22816D0C00CAA20E /* CompassView.m */; };
+		18ECC01122816DAA00CAA20E /* CompassManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECC01022816DAA00CAA20E /* CompassManage.m */; };
 		18F385512265817900E3A91F /* JYCustomAleartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F385502265817900E3A91F /* JYCustomAleartVC.m */; };
 		1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */; };
 		1F0536AA213A6BE7001E5FBB /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F053423213A6BE6001E5FBB /* UIImage+Extension.m */; };
@@ -143,6 +151,12 @@
 
 /* Begin PBXFileReference section */
 		0D7815E7ED8B00A86F9E814A /* Pods-LiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiftDemo/Pods-LiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		185E2E62226EF68C00F8ADC6 /* SensorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorController.h; sourceTree = "<group>"; };
+		185E2E63226EF68C00F8ADC6 /* SensorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorController.m; sourceTree = "<group>"; };
+		185E2E65226F07CF00F8ADC6 /* LocalVerifyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalVerifyManager.h; sourceTree = "<group>"; };
+		185E2E66226F07CF00F8ADC6 /* LocalVerifyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalVerifyManager.m; sourceTree = "<group>"; };
+		185E2E68226F0CB800F8ADC6 /* LocalVerifyTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalVerifyTestController.h; sourceTree = "<group>"; };
+		185E2E69226F0CB800F8ADC6 /* LocalVerifyTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalVerifyTestController.m; sourceTree = "<group>"; };
 		1883B033224E075F0011A7AF /* JYCustomAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCustomAlert.h; sourceTree = "<group>"; };
 		1883B034224E075F0011A7AF /* JYCustomAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCustomAlert.m; sourceTree = "<group>"; };
 		18961059224C627700F76E7A /* DrawTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawTestView.h; sourceTree = "<group>"; };
@@ -156,6 +170,16 @@
 		18B617AB224DEB1000BB4955 /* JYAlertTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAlertTestController.m; sourceTree = "<group>"; };
 		18C787492249F516009518D9 /* DrawRectTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectTestController.h; sourceTree = "<group>"; };
 		18C7874A2249F516009518D9 /* DrawRectTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectTestController.m; sourceTree = "<group>"; };
+		18ECC003228127A400CAA20E /* NoiseTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoiseTestController.h; sourceTree = "<group>"; };
+		18ECC004228127A400CAA20E /* NoiseTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoiseTestController.m; sourceTree = "<group>"; };
+		18ECC0062281285A00CAA20E /* NoiseTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoiseTestView.h; sourceTree = "<group>"; };
+		18ECC0072281285A00CAA20E /* NoiseTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoiseTestView.m; sourceTree = "<group>"; };
+		18ECC00922816B9A00CAA20E /* CompassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompassController.h; sourceTree = "<group>"; };
+		18ECC00A22816B9A00CAA20E /* CompassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompassController.m; sourceTree = "<group>"; };
+		18ECC00C22816D0C00CAA20E /* CompassView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompassView.h; sourceTree = "<group>"; };
+		18ECC00D22816D0C00CAA20E /* CompassView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompassView.m; sourceTree = "<group>"; };
+		18ECC00F22816DAA00CAA20E /* CompassManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompassManage.h; sourceTree = "<group>"; };
+		18ECC01022816DAA00CAA20E /* CompassManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompassManage.m; sourceTree = "<group>"; };
 		18F3854F2265817900E3A91F /* JYCustomAleartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCustomAleartVC.h; sourceTree = "<group>"; };
 		18F385502265817900E3A91F /* JYCustomAleartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCustomAleartVC.m; sourceTree = "<group>"; };
 		1F05341C213A6BE6001E5FBB /* UINavigationController+StatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StatusBarStyle.m"; sourceTree = "<group>"; };
@@ -439,8 +463,53 @@
 		18C94B342248BAD100089A20 /* 指纹 */ = {
 			isa = PBXGroup;
 			children = (
+				185E2E65226F07CF00F8ADC6 /* LocalVerifyManager.h */,
+				185E2E66226F07CF00F8ADC6 /* LocalVerifyManager.m */,
+				185E2E68226F0CB800F8ADC6 /* LocalVerifyTestController.h */,
+				185E2E69226F0CB800F8ADC6 /* LocalVerifyTestController.m */,
 			);
 			path = "指纹";
+			sourceTree = "<group>";
+		};
+		18ECBFFF228126DC00CAA20E /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				18ECC0022281273F00CAA20E /* 测网速 */,
+				18ECC0012281273F00CAA20E /* 测噪音 */,
+				18ECC0002281273F00CAA20E /* 指南针 */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		18ECC0002281273F00CAA20E /* 指南针 */ = {
+			isa = PBXGroup;
+			children = (
+				18ECC00922816B9A00CAA20E /* CompassController.h */,
+				18ECC00A22816B9A00CAA20E /* CompassController.m */,
+				18ECC00C22816D0C00CAA20E /* CompassView.h */,
+				18ECC00D22816D0C00CAA20E /* CompassView.m */,
+				18ECC00F22816DAA00CAA20E /* CompassManage.h */,
+				18ECC01022816DAA00CAA20E /* CompassManage.m */,
+			);
+			path = "指南针";
+			sourceTree = "<group>";
+		};
+		18ECC0012281273F00CAA20E /* 测噪音 */ = {
+			isa = PBXGroup;
+			children = (
+				18ECC003228127A400CAA20E /* NoiseTestController.h */,
+				18ECC004228127A400CAA20E /* NoiseTestController.m */,
+				18ECC0062281285A00CAA20E /* NoiseTestView.h */,
+				18ECC0072281285A00CAA20E /* NoiseTestView.m */,
+			);
+			path = "测噪音";
+			sourceTree = "<group>";
+		};
+		18ECC0022281273F00CAA20E /* 测网速 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "测网速";
 			sourceTree = "<group>";
 		};
 		19C70CD462B6D57D1C5AA933 /* Frameworks */ = {
@@ -914,6 +983,7 @@
 		8A320A492177172C00929BA4 /* FloorStrut */ = {
 			isa = PBXGroup;
 			children = (
+				18ECBFFF228126DC00CAA20E /* 工具 */,
 				8A320A4A2177172C00929BA4 /* Demo */,
 				8A320A572177172C00929BA4 /* 传感器 */,
 				8A320A5C2177172C00929BA4 /* 绘图与手势 */,
@@ -966,6 +1036,8 @@
 			children = (
 				18C94B342248BAD100089A20 /* 指纹 */,
 				8A320A582177172C00929BA4 /* 摇一摇 */,
+				185E2E62226EF68C00F8ADC6 /* SensorController.h */,
+				185E2E63226EF68C00F8ADC6 /* SensorController.m */,
 			);
 			path = "传感器";
 			sourceTree = "<group>";
@@ -1387,8 +1459,10 @@
 				1F0536C2213A6BE7001E5FBB /* WebLinkController.m in Sources */,
 				1F0536C0213A6BE7001E5FBB /* UIView+Extension.m in Sources */,
 				1F0536DC213A6BE7001E5FBB /* UICountingLabel.m in Sources */,
+				185E2E64226EF68C00F8ADC6 /* SensorController.m in Sources */,
 				18B36BD6225214F9001F9A32 /* CyclePageTestController.m in Sources */,
 				1F0536CC213A6BE7001E5FBB /* SLHud.m in Sources */,
+				185E2E6A226F0CB800F8ADC6 /* LocalVerifyTestController.m in Sources */,
 				8A320AA12177172C00929BA4 /* AVPlayerShowController.m in Sources */,
 				1F0536EA213A6BE7001E5FBB /* YCXMenuItem.m in Sources */,
 				1F0536B8213A6BE7001E5FBB /* UITextField+PlaceHolder.m in Sources */,
@@ -1411,6 +1485,7 @@
 				1F0536C1213A6BE7001E5FBB /* UIView+AdaptivePerfect.m in Sources */,
 				1F0536C7213A6BE7001E5FBB /* SLLocationManager.m in Sources */,
 				8A320AA22177172C00929BA4 /* MovieViewController.m in Sources */,
+				18ECC01122816DAA00CAA20E /* CompassManage.m in Sources */,
 				1F0536D8213A6BE7001E5FBB /* JYActionSheet.m in Sources */,
 				1F0537DA213A6C16001E5FBB /* XCNavigationBar.m in Sources */,
 				1F0537DD213A6C16001E5FBB /* BaseTableViewCell.m in Sources */,
@@ -1426,7 +1501,10 @@
 				1F0536D6213A6BE7001E5FBB /* GTMBase64.m in Sources */,
 				1F0536EB213A6BE7001E5FBB /* OYCountDownManager.m in Sources */,
 				8A320ABB2177172C00929BA4 /* Parameter.m in Sources */,
+				18ECC00B22816B9A00CAA20E /* CompassController.m in Sources */,
 				1F05379F213A6BE7001E5FBB /* JYScrollItemModel.m in Sources */,
+				18ECC0082281285A00CAA20E /* NoiseTestView.m in Sources */,
+				18ECC00E22816D0C00CAA20E /* CompassView.m in Sources */,
 				1883B035224E075F0011A7AF /* JYCustomAlert.m in Sources */,
 				1F0536C4213A6BE7001E5FBB /* EmptyClickView.m in Sources */,
 				1F0536D5213A6BE7001E5FBB /* Foundation+Log.m in Sources */,
@@ -1456,9 +1534,11 @@
 				1F0537A1213A6BE7001E5FBB /* JYScrollView.m in Sources */,
 				1F0536C9213A6BE7001E5FBB /* SLCollectionLogTool.m in Sources */,
 				1F0536CB213A6BE7001E5FBB /* UITextView+Placeholder.m in Sources */,
+				18ECC005228127A400CAA20E /* NoiseTestController.m in Sources */,
 				1F0537DB213A6C16001E5FBB /* BaseNavigationController.m in Sources */,
 				1F0536D1213A6BE7001E5FBB /* SelectTool.m in Sources */,
 				8A320AA32177172C00929BA4 /* MotionShowController.m in Sources */,
+				185E2E67226F07CF00F8ADC6 /* LocalVerifyManager.m in Sources */,
 				8A320AAD2177172C00929BA4 /* BackGroundCustomMask.m in Sources */,
 				8A320AB22177172C00929BA4 /* FloorCell.m in Sources */,
 				18B617AC224DEB1000BB4955 /* JYAlertTestController.m in Sources */,
@@ -1618,17 +1698,19 @@
 			baseConfigurationReference = 0D7815E7ED8B00A86F9E814A /* Pods-LiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4DBMNGP47G;
+				DEVELOPMENT_TEAM = VMKD42Z3X4;
 				GCC_PREFIX_HEADER = LiftDemo/Classes/Other/LiftDemo.pch;
 				INFOPLIST_FILE = LiftDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lostifor.LiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = Lostifor.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1638,17 +1720,19 @@
 			baseConfigurationReference = 24FA6327DD5E89A3D4B603EE /* Pods-LiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4DBMNGP47G;
+				DEVELOPMENT_TEAM = VMKD42Z3X4;
 				GCC_PREFIX_HEADER = LiftDemo/Classes/Other/LiftDemo.pch;
 				INFOPLIST_FILE = LiftDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Lostifor.LiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = Lostifor.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

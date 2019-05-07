@@ -134,14 +134,14 @@
 #pragma mark - Private
 - (IBAction)switchValueChangeAction:(UISwitch *)sender {
     if (sender.tag == 0) {
-        _pagerView.isInfiniteLoop = sender.isOn;
-        [_pagerView updateData];
+        self.pagerView.isInfiniteLoop = sender.isOn;
+        [self.pagerView updateData];
     }else if (sender.tag == 1) {
-        _pagerView.autoScrollInterval = sender.isOn ? 3.0:0;
+        self.pagerView.autoScrollInterval = sender.isOn ? 3.0:0;
     }else if (sender.tag == 2) {
-        _pagerView.layout.itemHorizontalCenter = sender.isOn;
+        self.pagerView.layout.itemHorizontalCenter = sender.isOn;
         [UIView animateWithDuration:0.3 animations:^{
-            [_pagerView setNeedUpdateLayout];
+            [self.pagerView setNeedUpdateLayout];
         }];
     }
 }

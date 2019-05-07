@@ -26,7 +26,6 @@
     
     if (self.isTouchBack) {
         [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelAction)]];
-        
     }
     
 }
@@ -38,6 +37,10 @@
 - (void)cancelAction {
     NSLog(@"tapBack");
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (void)dealloc {
+    NSLog(@"已销毁");
 }
 
 @end

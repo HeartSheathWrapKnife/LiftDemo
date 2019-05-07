@@ -32,7 +32,7 @@
 }
 ///  初始化列表数据
 - (void)setupInitializeData {
-    NSArray * sections = @[@"视图封装",@"动画",@"绘图与手势",@"蓝牙",@"传感器",@"demo"];
+    NSArray * sections = @[@"视图封装",@"动画",@"绘图与手势",@"蓝牙",@"传感器",@"demo",@"Tools"];
     for (int i = 0 ; i < sections.count; i ++) {
         FloorModel *model = [FloorModel new];
         model.title = sections[i];

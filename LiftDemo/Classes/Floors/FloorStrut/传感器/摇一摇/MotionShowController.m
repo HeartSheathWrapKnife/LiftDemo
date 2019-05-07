@@ -12,8 +12,6 @@
 #import "JYSoundTool.h"
 
 @interface MotionShowController ()
-///<UITableViewDelegate, UITableViewDataSource>
-//@property (nonatomic,   weak) UITableView * tableView;
 @property (nonatomic, strong) CMMotionManager * motionManager;//摇一摇管理
 @property (nonatomic, strong) UILabel * showLabel;
 @end
@@ -104,50 +102,6 @@
     }
     
 }
-
-#pragma mark - Networking
-
-#pragma mark - Delegate
-
-//#pragma mark UITableViewDelegate & UITableViewDataSource
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return 0;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 44;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 44;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//
-//  return nil;
-//}
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//}
-
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    return nil;
-//}
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-//    return 0;
-//}
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-//    return nil;
-//}
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-//    return 0;
-//}
-//
-
 
 #pragma mark - Private
 /// 接收加速器更新
