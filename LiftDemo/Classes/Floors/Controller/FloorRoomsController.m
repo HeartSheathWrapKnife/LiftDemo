@@ -118,7 +118,10 @@
                                       className:@"NoiseTestController"],
                      [FloorModel modelWithTitle:@"磁力计 - 指南针"
                                            desc:@"CLLocationManager + CMMotionManager 实现"
-                                      className:@"CompassController"],];
+                                      className:@"CompassController"],
+                     [FloorModel modelWithTitle:@"mirror"
+                                           desc:@"mirror"
+                                      className:@"MirrorController"],];
     
 }
 

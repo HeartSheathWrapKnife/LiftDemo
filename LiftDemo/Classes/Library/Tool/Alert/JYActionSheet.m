@@ -49,7 +49,6 @@ static NSInteger rowCount = 0;
     [window addSubview:actionSheet];
     //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:actionSheet action:@selector(tap)];
     //    [window addGestureRecognizer:tap];
-    
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,kScreenHeight, kScreenWidth, kScreenHeight*0.618)];
     float contentH = options.count*68;
     if (contentH < kScreenHeight*0.618) {

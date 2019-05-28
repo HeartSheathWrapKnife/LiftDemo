@@ -11,7 +11,11 @@
 		185E2E67226F07CF00F8ADC6 /* LocalVerifyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E2E66226F07CF00F8ADC6 /* LocalVerifyManager.m */; };
 		185E2E6A226F0CB800F8ADC6 /* LocalVerifyTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E2E69226F0CB800F8ADC6 /* LocalVerifyTestController.m */; };
 		1883B035224E075F0011A7AF /* JYCustomAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883B034224E075F0011A7AF /* JYCustomAlert.m */; };
+		189362E32292492A002123C3 /* MirrorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189362E22292492A002123C3 /* MirrorController.m */; };
 		1896105B224C627700F76E7A /* DrawTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896105A224C627700F76E7A /* DrawTestView.m */; };
+		18AB08C0229D13C800231AAA /* JYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB08BF229D13C800231AAA /* JYObject.m */; };
+		18AB08C5229D151100231AAA /* JYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB08C4229D151100231AAA /* JYUtils.m */; };
+		18AB08C9229D1DC000231AAA /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB08C8229D1DC000231AAA /* DBManager.m */; };
 		18B36BD22251F0CB001F9A32 /* NSString+Adaptive.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */; };
 		18B36BD6225214F9001F9A32 /* CyclePageTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B36BD5225214F9001F9A32 /* CyclePageTestController.m */; };
 		18B36BD8225216DB001F9A32 /* CPTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B36BD7225216DB001F9A32 /* CPTestView.xib */; };
@@ -159,8 +163,16 @@
 		185E2E69226F0CB800F8ADC6 /* LocalVerifyTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalVerifyTestController.m; sourceTree = "<group>"; };
 		1883B033224E075F0011A7AF /* JYCustomAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCustomAlert.h; sourceTree = "<group>"; };
 		1883B034224E075F0011A7AF /* JYCustomAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCustomAlert.m; sourceTree = "<group>"; };
+		189362E12292492A002123C3 /* MirrorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MirrorController.h; sourceTree = "<group>"; };
+		189362E22292492A002123C3 /* MirrorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MirrorController.m; sourceTree = "<group>"; };
 		18961059224C627700F76E7A /* DrawTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawTestView.h; sourceTree = "<group>"; };
 		1896105A224C627700F76E7A /* DrawTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawTestView.m; sourceTree = "<group>"; };
+		18AB08BE229D13C800231AAA /* JYObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYObject.h; sourceTree = "<group>"; };
+		18AB08BF229D13C800231AAA /* JYObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYObject.m; sourceTree = "<group>"; };
+		18AB08C3229D151100231AAA /* JYUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYUtils.h; sourceTree = "<group>"; };
+		18AB08C4229D151100231AAA /* JYUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYUtils.m; sourceTree = "<group>"; };
+		18AB08C7229D1DC000231AAA /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		18AB08C8229D1DC000231AAA /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		18B36BD02251F0CA001F9A32 /* NSString+Adaptive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Adaptive.h"; sourceTree = "<group>"; };
 		18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Adaptive.m"; sourceTree = "<group>"; };
 		18B36BD4225214F9001F9A32 /* CyclePageTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyclePageTestController.h; sourceTree = "<group>"; };
@@ -430,6 +442,42 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		189362DF229248FD002123C3 /* Mirror */ = {
+			isa = PBXGroup;
+			children = (
+				189362E12292492A002123C3 /* MirrorController.h */,
+				189362E22292492A002123C3 /* MirrorController.m */,
+			);
+			path = Mirror;
+			sourceTree = "<group>";
+		};
+		189362E0229248FD002123C3 /* Rule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rule;
+			sourceTree = "<group>";
+		};
+		18AB08C2229D14E100231AAA /* ArchiveTools */ = {
+			isa = PBXGroup;
+			children = (
+				18AB08BE229D13C800231AAA /* JYObject.h */,
+				18AB08BF229D13C800231AAA /* JYObject.m */,
+				18AB08C3229D151100231AAA /* JYUtils.h */,
+				18AB08C4229D151100231AAA /* JYUtils.m */,
+			);
+			path = ArchiveTools;
+			sourceTree = "<group>";
+		};
+		18AB08C6229D171C00231AAA /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				18AB08C7229D1DC000231AAA /* DBManager.h */,
+				18AB08C8229D1DC000231AAA /* DBManager.m */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
 		18B36BD322521494001F9A32 /* CyclePagerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +522,8 @@
 		18ECBFFF228126DC00CAA20E /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				189362DF229248FD002123C3 /* Mirror */,
+				189362E0229248FD002123C3 /* Rule */,
 				18ECC0022281273F00CAA20E /* 测网速 */,
 				18ECC0012281273F00CAA20E /* 测噪音 */,
 				18ECC0002281273F00CAA20E /* 指南针 */,
@@ -523,6 +573,7 @@
 		1F05341B213A6BE6001E5FBB /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				18AB08C2229D14E100231AAA /* ArchiveTools */,
 				18B36BD02251F0CA001F9A32 /* NSString+Adaptive.h */,
 				18B36BD12251F0CA001F9A32 /* NSString+Adaptive.m */,
 				1F053447213A6BE6001E5FBB /* Category.h */,
@@ -915,6 +966,7 @@
 		1FCE7A31212BEF5E00B15053 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18AB08C6229D171C00231AAA /* DBManager */,
 				8A320A432177172C00929BA4 /* Floors */,
 				8A320A7F2177172C00929BA4 /* Hall */,
 				8A320A872177172C00929BA4 /* Login */,
@@ -1471,6 +1523,7 @@
 				1F0536CF213A6BE7001E5FBB /* SelectScrollMenu.m in Sources */,
 				1F0537A0213A6BE7001E5FBB /* JYScrollItem.m in Sources */,
 				8A320AB02177172C00929BA4 /* BackGroundMaskTestController.m in Sources */,
+				18AB08C0229D13C800231AAA /* JYObject.m in Sources */,
 				8A320A9E2177172C00929BA4 /* FloorsController.m in Sources */,
 				8A320AB92177172C00929BA4 /* MineViewController.m in Sources */,
 				1F0536C8213A6BE7001E5FBB /* NetWorkingTool.m in Sources */,
@@ -1478,6 +1531,7 @@
 				18F385512265817900E3A91F /* JYCustomAleartVC.m in Sources */,
 				1F0536D7213A6BE7001E5FBB /* AESTool.m in Sources */,
 				1F0536A9213A6BE7001E5FBB /* UINavigationController+StatusBarStyle.m in Sources */,
+				189362E32292492A002123C3 /* MirrorController.m in Sources */,
 				8A320AB82177172C00929BA4 /* RegisterController.m in Sources */,
 				18B36BD22251F0CB001F9A32 /* NSString+Adaptive.m in Sources */,
 				1896105B224C627700F76E7A /* DrawTestView.m in Sources */,
@@ -1509,6 +1563,7 @@
 				1F0536C4213A6BE7001E5FBB /* EmptyClickView.m in Sources */,
 				1F0536D5213A6BE7001E5FBB /* Foundation+Log.m in Sources */,
 				1F0536D2213A6BE7001E5FBB /* SLImagePickerController.m in Sources */,
+				18AB08C5229D151100231AAA /* JYUtils.m in Sources */,
 				1F0536CE213A6BE7001E5FBB /* SelectToolModel.m in Sources */,
 				8A320AB72177172C00929BA4 /* ProtocalVC.m in Sources */,
 				8A320AA92177172C00929BA4 /* ZLGestureLockIndicator.m in Sources */,
@@ -1516,6 +1571,7 @@
 				8A320AB52177172C00929BA4 /* TYCyclePagerViewCell.m in Sources */,
 				1F0536E5213A6BE7001E5FBB /* SVProgressHUD+SL.m in Sources */,
 				1F0536C5213A6BE7001E5FBB /* EmptyView.m in Sources */,
+				18AB08C9229D1DC000231AAA /* DBManager.m in Sources */,
 				8A320AB42177172C00929BA4 /* HallController.m in Sources */,
 				1F0536BE213A6BE7001E5FBB /* UIButton+touch.m in Sources */,
 				1F0536AA213A6BE7001E5FBB /* UIImage+Extension.m in Sources */,

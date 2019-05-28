@@ -84,7 +84,7 @@
     
     NSArray *array = @[@"北",@"东",@"南",@"西"];
     
-    for (int i = 0; i < 180; i++) {
+    for (int i = 0; i < 180; i++) {//创建表盘
         
         CGFloat startAngle = (-M_PI_2+perAngle*i);
         CGFloat endAngle = startAngle+perAngle/2;
@@ -98,13 +98,13 @@
         
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         
-        if (i == 0) {
+        if (i == 0) {//标识north
             shapeLayer.strokeColor = _northColor.CGColor;
             shapeLayer.lineWidth = LineWidth;
-        }else if (i%15 == 0) {
+        }else if (i%15 == 0) {//大刻度
             shapeLayer.strokeColor = _calibrationColor.CGColor;
             shapeLayer.lineWidth = LineWidth;
-        }else{
+        }else{//普通刻度
             shapeLayer.strokeColor = CGColorCreateCopyWithAlpha(_calibrationColor.CGColor, 0.6);
             shapeLayer.lineWidth = LineWidth;
         }
